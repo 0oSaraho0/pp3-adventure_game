@@ -11,7 +11,7 @@ def open_image():
     print(pyfiglet.figlet_format('DEAMON', justify='center'))
     print(pyfiglet.figlet_format('QUEST', justify='center'))
 
-    name = input('If you wish to play please enter your name')
+    name = input('If you wish to play please enter your name ')
 
     print(f'Welcome {name}')
     intro()    
@@ -42,7 +42,23 @@ def intro():
 
 
 def start_game():
-    
+    """ starts game, asks player if they wish to touch sphere if else yes not statememt"""
+    while True:
+        touch_orb = input('Do you touch the orb?  (yes/no) \n')
+        if touch_orb == 'no':
+            print('How terribly brave of you! Just leave your sister to her fate')
+            print('Go and have a cup of tea and forget all about it')
+            print('GAME OVER!')
+            play_again()
+            break
+        elif touch_orb == 'yes':
+            deamon_realm()
+        else:
+            print('Incorrect answer type yes or no')
+            continue
+
+        
+
 
 
 
