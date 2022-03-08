@@ -28,13 +28,14 @@ def intro():
     print('As you approach the door you hear a strange chantinf sound coming from the room')
     print('Full of fear you slowly open the door....')
     print('Standing over your sisters cot is what looks like a man')
-    print('he is wearing black robes ans glowing red eyes')
-    print(f"He looks at you and says you're too late")
-    print("Your sister is mine now. I'm taking her back to the Deamon Rehealm")
-    print('and there is nothing you can do to stop me')
+    print('he is wearing black robes and has glowing red eyes')
+    print("He looks at you and says 'you are too late'")
+    print("'I am the Deamon King!'")
+    print("'Your sister is mine now. Im taking her back to the Deamon Realm'")
+    print("'and there is nothing you can do to stop me'")
     print('In a flash of light he sends a sphere of light towards you')
-    print('There is no time to dodge it and it hits you square in the chest and knocks you unconcious')
-    print('When you wake up the room is dark and your sister and the Deamon are gone')
+    print('There is no time to dodge it... it hits you square in the chest and knocks you unconcious')
+    print('When you wake up the room is dark and your sister and the Deamon King are gone')
     print('You sit and cry for a moment ....')
     print('Then you notice a small glowing orb underneath the cot')
     print('It must have been dropped by the Deamon King')
@@ -57,7 +58,7 @@ def start_game():
             print('Incorrect answer type yes or no')
             continue
 
-        
+def deamon_realm
 
 
 
