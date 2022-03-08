@@ -4,15 +4,46 @@
 
 import pyfiglet
 
+
+
 def open_image():
     """ Shows name of game and gets player name"""
     print(pyfiglet.figlet_format('DEAMON', justify='center'))
     print(pyfiglet.figlet_format('QUEST', justify='center'))
 
-    print('If you wish to play, please enter your name')
-    x = input()
-    print('Welcome ' + x)
+    name = input('If you wish to play please enter your name')
+
+    print(f'Welcome {name}')
     intro()    
+
+def intro():
+    """ Sets the scene for the game using the players name and asks them if they wish to proceed to the next section"""
+    print()
+    print('It is a normal boring Saturday night.')
+    print('Your parents have gone out for the evening leaving you in charge')
+    print('your baby sister is sleeping upstairs in her bedroom')
+    print()
+    print('Suddenly you hear a strange noise coming from your sisters bedroom')
+    print('so you go upstairs to investigate')
+    print('As you approach the door you hear a strange chantinf sound coming from the room')
+    print('Full of fear you slowly open the door....')
+    print('Standing over your sisters cot is what looks like a man')
+    print('he is wearing black robes ans glowing red eyes')
+    print(f"He looks at you and says you're too late")
+    print("Your sister is mine now. I'm taking her back to the Deamon Rehealm")
+    print('and there is nothing you can do to stop me')
+    print('In a flash of light he sends a sphere of light towards you')
+    print('There is no time to dodge it and it hits you square in the chest and knocks you unconcious')
+    print('When you wake up the room is dark and your sister and the Deamon are gone')
+    print('You sit and cry for a moment ....')
+    print('Then you notice a small glowing orb underneath the cot')
+    print('It must have been dropped by the Deamon King')
+    start_game()
+
+
+def start_game():
+    
+
 
 
 open_image()    
