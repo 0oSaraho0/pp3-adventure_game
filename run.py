@@ -54,11 +54,42 @@ def start_game():
             break
         elif touch_orb == 'yes':
             deamon_realm()
+            break
         else:
-            print('Incorrect answer type yes or no')
+            print('Incorrect answer type yes or no \n')
             continue
 
-def deamon_realm
+def deamon_realm():
+    print('You find yourself in a strange house')
+    print('out of the window you can see a dark and strange land')
+    print('you are definately no longer on earth')
+    print('You look arround the room you are in')
+    print('the room is almost completely bare')
+    print('there is a table in the corner with a piece of paper on it')
+    print('it is a note that reads...')
+    print('If you are reading this you found the travel orb i dropped')
+    print('You are either very brave or very stupid')
+    print('good luck in the Deamon Realm! you will need it!')
+    print('there are 3 doors')
+    print('to your right the door leads to a lake')
+    print('To your left the door leads to a field')
+    print('in front of you the door leads to a dark mountain')
+    while True:
+        doors = input('Which way will go you? (left/right/front)\n')
+        if doors == left:
+            lake()
+            break
+        elif doors == right:
+            field()
+            break
+        elif doors == front:
+            mountain()
+            break
+        else:
+            print('incorrect answer you must enter left right or front')
+            continue
+
+    
 
 
 
