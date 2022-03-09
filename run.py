@@ -4,7 +4,8 @@
 
 import pyfiglet
 
-
+global fish
+fish = 'no'
 
 def open_image():
     """ Shows name of game and gets player name"""
@@ -76,7 +77,7 @@ def deamon_realm():
     print('To your left the door leads to a field')
     print('in front of you the door leads to a dark mountain')
     while True:
-        doors = input('Which way will go you? (left/right/front)\n')
+        doors = input('Which way will go you? (left/right/front) \n')
         if doors == 'left':
             lake()
             break
@@ -98,9 +99,9 @@ def lake():
     print('and strange eerie trees that have blood red leaves')
     print('at the edge of the late there is a small wooden pier')
     print('at the end of the pier there is a fishing rod set up')
-    print('It seems a little strange but ...')
+    print('It speems a little strange but ...')
     while True:
-        fishing = input('would you like to go fishing? (yes/no)/n')
+        fishing = input('would you like to go fishing? (yes/no) \n ')
         if fishing == 'yes':
             lets_fish()
             break
@@ -112,9 +113,39 @@ def lake():
             print('Incorrect answer type yes or no')
             continue  
 
+def lets_fish():
+    """ Fishing choice, asks player if they would like to go fishing and keep the fish"""
+    print()
+    print('You walk down the little pier and pick up the fishing rod') 
+    print('You cast the line into the water and take a seat in the little chair') 
+    print('thant is next to the pole')      
+    print('after a few minutes you feel a sharp tug at the line..')
+    print('you quickly reel the line in')
+    print("you can't believe it")
+    print('you have actcually caught a fish....')
+    while True:
+        global fish
+        fish = input('Would you like to keep the fish (yes/no) \n')
+        if fish == 'yes':
+            print('this fish might come in handy for something.')
+            print("It looks a bit gross but if i'm hungry enough maybe I could eat it myself")
+            print('you wrap it in some of the weird red leaves from the trees and take it with you')
+            stay_at_lake()
+            break
+        elif fish == 'no':
+            print("I don't want to kill the fish and it's a bit gross")
+            print('you throw the fish back in the pond')
+            stay_at_lake()
+            break
+        else:
+            print('Incorrect answer type yes or no.')
+            
+
+
+
 
 def play_again():
-    """ Called each time the player wins or looses.  
+    """ Called each time the player wins or loses.  
     askes the player if they would like to play again and
     takes them to the start screen if the do or thanks them for 
     playing"""
