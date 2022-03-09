@@ -60,6 +60,7 @@ def start_game():
             continue
 
 def deamon_realm():
+    """Continues story in the Deamon Realm and intoroduces 3 doors to go through"""
     print('You find yourself in a strange house')
     print('out of the window you can see a dark and strange land')
     print('you are definately no longer on earth')
@@ -76,18 +77,44 @@ def deamon_realm():
     print('in front of you the door leads to a dark mountain')
     while True:
         doors = input('Which way will go you? (left/right/front)\n')
-        if doors == left:
+        if doors == 'left':
             lake()
             break
-        elif doors == right:
+        elif doors == 'right':
             field()
             break
-        elif doors == front:
+        elif doors == 'front':
             mountain()
             break
         else:
             print('incorrect answer you must enter left right or front')
             continue
+
+def lake():
+    """ takes you to the lake and asks you player if they want to go fishing"""
+    print('you take the left door...')
+    print('You walk down a winding path and find yourself at a large lake')
+    print('the water is black and it is surrounded by dark purple sand')
+    print('and strange eerie trees that have blood red leaves')
+    print('at the edge of the late there is a small wooden pier')
+    print('at the end of the pier there is a fishing rod set up')
+    print('It seems a little strange but ...')
+    while True:
+        fishing = input('would you like to go fishing? (yes/no)/n')
+        if fishing == 'yes':
+            lets_fish()
+            break
+        elif fishing == 'no':
+            print("There is no time to fish. You've got a sister to save!")
+            stay_at_lake()
+            break
+        else:
+            print('Incorrect answer type yes or no')
+            continue  
+
+
+
+
 
     
 
