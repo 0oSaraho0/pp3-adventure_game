@@ -118,7 +118,7 @@ def lets_fish():
     print()
     print('You walk down the little pier and pick up the fishing rod') 
     print('You cast the line into the water and take a seat in the little chair') 
-    print('thant is next to the pole')      
+    print('that is next to the pole')      
     print('after a few minutes you feel a sharp tug at the line..')
     print('you quickly reel the line in')
     print("you can't believe it")
@@ -139,7 +139,35 @@ def lets_fish():
             break
         else:
             print('Incorrect answer type yes or no.')
+            continue
             
+
+def stay_at_lake():
+    """ Asks player if they would like to stay by the lake or if 
+    they would like to move on with the game"""
+    while True:
+        stay = input('Would you like to stay at the lake? (yes/no) \n')
+        if stay == 'yes':
+            print('This lake is really peaceful')
+            print('You decide to stay for a while')
+            print('The purple sand surrounding the lake looks really intersting')
+            print('You walk down to the edge of the water ')
+            print('You reach down and take a handfull of sand')
+            print('The moment your skin touches the sand it starts to move....')
+            print('the sand is actally millions of tiny bugs and they swarm over your entire body')
+            print('You scream in pain as the bugs consume your entire body leaving just a pile of bones by the water')
+            print('GAME OVER!')
+            play_again()
+            break
+        elif stay == 'no':
+            back_to_the_house()
+        else:
+            print('Incorrect answer please type yes or no')
+            continue
+        
+
+
+
 
 
 
