@@ -113,10 +113,22 @@ def lake():
             continue  
 
 
+def play_again():
+    """ Called each time the player wins or looses.  
+    askes the player if they would like to play again and
+    takes them to the start screen if the do or thanks them for 
+    playing"""
+    while True:
+        play = input('Would you like to play again? (yes/no\n')
+        if play == 'yes':
+            open_image()
+            break
+        elif play == 'no':
+            print('Thank you for playing! Hope to see you again soon!')
+            break
+        else:
+            print('Incorrect answer please type yes or no')
 
-
-
-    
 
 
 
