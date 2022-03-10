@@ -44,7 +44,7 @@ def intro():
 
 
 def start_game():
-    """ starts game, asks player if they wish to touch sphere if else yes not statememt"""
+    """ starts game, asks player if they wish to touch sphere if else yes not statement"""
     while True:
         touch_orb = input('Do you touch the orb?  (yes/no) \n')
         if touch_orb == 'no':
@@ -150,26 +150,27 @@ def stay_at_lake():
         if stay == 'yes':
             print('This lake is really peaceful')
             print('You decide to stay for a while')
-            print('The purple sand surrounding the lake looks really intersting')
+            print('The purple sand surrounding the lake looks really interesting')
             print('You walk down to the edge of the water ')
             print('You reach down and take a handfull of sand')
             print('The moment your skin touches the sand it starts to move....')
-            print('the sand is actally millions of tiny bugs and they swarm over your entire body')
-            print('You scream in pain as the bugs consume your entire body leaving just a pile of bones by the water')
+            print('the sand is actally millions of tiny bugs...')
+            print('You scream in pain as the bugs consume your entire body')
+            print('moments later there is just a pile of bones by the water')
+            print('What a way to go!')
             print('GAME OVER!')
             play_again()
             break
         elif stay == 'no':
-            back_to_the_house()
+            #back_to_the_house()
         else:
+            break
             print('Incorrect answer please type yes or no')
             continue
         
 
 
-
-
-
+    
 
 
 def play_again():
