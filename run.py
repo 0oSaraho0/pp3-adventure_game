@@ -146,8 +146,8 @@ def stay_at_lake():
     """ Asks player if they would like to stay by the lake or if 
     they would like to move on with the game"""
     while True:
-        stay = input('Would you like to stay at the lake? (yes/no) \n')
-        if stay == 'yes':
+        stay = input('Would you like to stay at the lake, go to the mountain, or go to the field? (stay/mountain/field) \n')
+        if stay == 'stay':
             print('This lake is really peaceful')
             print('You decide to stay for a while')
             print('The purple sand surrounding the lake looks really interesting')
@@ -161,17 +161,15 @@ def stay_at_lake():
             print('GAME OVER!')
             play_again()
             break
-        elif stay == 'no':
-            #back_to_the_house()
+        elif stay == 'mountain':
+            mountain()
+            break
+        elif stay == 'field':
+            field()
         else:
             break
-            print('Incorrect answer please type yes or no')
+            print('Incorrect answer please type stay mountain or field')
             continue
-        
-
-
-    
-
 
 def play_again():
     """ Called each time the player wins or loses.  
