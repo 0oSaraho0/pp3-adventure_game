@@ -50,7 +50,8 @@ def start_game():
         if touch_orb == 'no':
             print('How terribly brave of you! Just leave your sister to her fate')
             print('Go and have a cup of tea and forget all about it')
-            print('GAME OVER!')
+            print(pyfiglet.figlet_format('GAME', justify='center'))
+            print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
             break
         elif touch_orb == 'yes':
@@ -158,7 +159,8 @@ def stay_at_lake():
             print('You scream in pain as the bugs consume your entire body')
             print('moments later there is just a pile of bones by the water')
             print('What a way to go!')
-            print('GAME OVER!')
+            print(pyfiglet.figlet_format('GAME', justify='center'))
+            print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
             break
         elif stay == 'mountain':
@@ -226,7 +228,8 @@ def befriend_dragon():
             print('the dragon likes the smell of you for all the wrong reasons...')
             print('before you can blink the dragon pounces...')
             print('AND SWALLOWS YOU WHOLE!!!')
-            print('GAME OVER!!!')
+            print(pyfiglet.figlet_format('GAME', justify='center'))
+            print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
             break
         elif dragon_taming == 'run':
@@ -235,6 +238,8 @@ def befriend_dragon():
         else:
             print(f'Incorrect answer you must input: {dragon_input}')
 
+def run_from_dragon():
+    print('The dragon is looking at you....')
 
 
 
