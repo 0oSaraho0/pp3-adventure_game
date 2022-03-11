@@ -239,7 +239,19 @@ def befriend_dragon():
             print(f'Incorrect answer you must input: {dragon_input}')
 
 def run_from_dragon():
+    """ defining what happens when the player runs from the dragon"""
     print('The dragon is looking at you....')
+    print('You siese your moment and run as fast as you can away from the dragon')
+    print('The dragon leaps into the air and grabs you with its claws')
+    print('It takes you flying high into the air')
+    print('the dragon takes you high up into the mountain....')
+    print('and drops you into a nest....')
+    print('waiting in the nest are four hungry baby dragons.....')
+    print('who devour you instantly')
+    print(pyfiglet.figlet_format('GAME', justify='center'))
+    print(pyfiglet.figlet_format('OVER!', justify='center'))
+    play_again()
+
 
 
 
@@ -250,7 +262,7 @@ def play_again():
     takes them to the start screen if the do or thanks them for 
     playing"""
     while True:
-        play = input('Would you like to play again? (yes/no\n')
+        play = input('Would you like to play again? (yes/no) \n')
         if play == 'yes':
             open_image()
             break
