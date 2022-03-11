@@ -196,6 +196,47 @@ def field():
             print('Incorrect answer please type run or befriend')
             continue
 
+def befriend_dragon():
+    """gives the player the opportunity to befriend the dragon.  This will only work if the player
+    has got the fish from the lake, otherwise the dragon will kill them"""
+    print()
+    print('This dragon looks friendly enough you think to yourself ')
+    print("I'm sure I can whin it over")
+    print('You start to walk slowly towards the dragon....')
+    print('but as you step closer the dragon starts to make a low growling sound.....')
+    print("you're starting to wonder if you've made the correct decision.....")
+    print('What do you do?')
+    print('put your hand out to try and pet the dragon')
+    print("change you're mind and run")
+    global fish
+    if fish == 'yes':
+        print('give the Dragon the fish from the lake')
+    if fish == 'yes':
+        dragon_input = ('Pet the dragon, Run or give the dragon the fish (pet/run/fish)')
+    else:
+        dragon_input = ('Pet the dragon or Run (pet/run)')
+    while True:
+        dragon_taming = input(f'Do you {dragon_input}')
+        if dragon_taming == 'fish':
+            new_dragon_friend()
+        elif dragon_taming == 'pet':
+            print('You tentitively stretch out your and towards the dragons nose')
+            print('the dragon gives you a sniff.....')
+            print('but something is wrong...')
+            print('the dragon likes the smell of you for all the wrong reasons...')
+            print('before you can blink the dragon pounces...')
+            print('AND SWALLOWS YOU WHOLE!!!')
+            print('GAME OVER!!!')
+            play_again()
+            break
+        elif dragon_taming == 'run':
+            run_from_dragon()
+            break
+        else:
+            print(f'Incorrect answer you must input: {dragon_input}')
+
+
+
 
 
 def play_again():
