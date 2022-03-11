@@ -171,6 +171,33 @@ def stay_at_lake():
             print('Incorrect answer please type stay mountain or field')
             continue
 
+def field():
+    """ plays when the payler chooses to go to the field, here you find the dragon can choose 
+    befriend the dragon,  if you have the fish you can win the dragon over, if not the dragon 
+    will eat you"""
+
+    print('You set off along the path')
+    print('and find your self in an enormous field full of green and red flowers')
+    print('there seems to be a big hill in the middle of it...')
+    print('you head towards the hill to see if you can see anything from the top')
+    print('as you get close to the hill you realise it is moving....')
+    print('the hill unfolds and looks straight at you....')
+    print('Its not a hill.....')
+    print('Its a DRAGON......')
+    while True:
+        dragon = input('Do you run, or try to befriend the dragon (run/befriend)')
+        if dragon == 'run':
+            run_from_dragon()
+            break
+        elif dragon == 'befriend':
+            befriend_dragon()
+            break
+        else:
+            print('Incorrect answer please type run or befriend')
+            continue
+
+
+
 def play_again():
     """ Called each time the player wins or loses.  
     askes the player if they would like to play again and
