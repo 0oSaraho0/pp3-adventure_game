@@ -291,6 +291,52 @@ def new_dragon_friend():
             print('Incorrect amswer please input joyride or castle')  
 
 
+            
+
+
+def mountain():
+    """Plays when the player picks mountain path.  It gives the option 
+    to collect an exploding flower"""
+    print('You climb the rocky mountain path')  
+    print('Growing alomg the sides are the most ')  
+    print('beautiful pink flowers')
+    print('Do you stop to smell the flowers')
+    print('pick a flower to take with you')
+    print('Ignore the flowers completely')
+    while True:
+        flower = input('(smell/pick/ignore)')  
+        if flower == 'smell':
+            print('You stop ans smell the flowers')
+            print('They smell beautiful')
+            print('But they make youre nose ticlkle...')
+            print('These are no ordinary flowers...')
+            print('The pollen has explosive qualities')
+            print('unfortunately you have a large quantity')
+            print('of pollen up your nose')
+            print('you try to hold in the sneeze')
+            print("but you can't")
+            print('You sneeze')
+            print('and your head explodes')
+            print(pyfiglet.figlet_format('GAME', justify='center'))
+            print(pyfiglet.figlet_format('OVER!', justify='center'))
+            play_again()
+            break
+        elif flower == 'pick':
+            print('These flowers make come in handy later')
+            print('you carefully wrap one up and put it in your pocket')
+            break
+        elif flower == 'ignore':
+            print('There is no time to stop for flowers')
+            print("I've got to save my sister")
+            break
+        else:
+            print('incorrect answer please enter smell, pick or ignore')
+            continue
+        bear()
+
+
+
+
 def play_again():
     """ Called each time the player wins or loses.  
     askes the player if they would like to play again and
