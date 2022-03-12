@@ -7,6 +7,7 @@ import pyfiglet
 global fish
 fish = 'no'
 
+
 def open_image():
     """ Shows name of game and gets player name"""
     print(pyfiglet.figlet_format('DEAMON', justify='center'))
@@ -17,8 +18,10 @@ def open_image():
     print(f'Welcome {name}')
     intro()    
 
+
 def intro():
-    """ Sets the scene for the game using the players name and asks them if they wish to proceed to the next section"""
+    """ Sets the scene for the game using the players name and asks them 
+    if they wish to proceed to the next section"""
     print()
     print('It is a normal boring Saturday night.')
     print('Your parents have gone out for the evening leaving you in charge')
@@ -238,6 +241,7 @@ def befriend_dragon():
         else:
             print(f'Incorrect answer you must input: {dragon_input}')
 
+
 def run_from_dragon():
     """ defining what happens when the player runs from the dragon"""
     print('The dragon is looking at you....')
@@ -252,8 +256,39 @@ def run_from_dragon():
     print(pyfiglet.figlet_format('OVER!', justify='center'))
     play_again()
 
+def new_dragon_friend():
+    """ the player has the dragon on side and next must decide whether to go to the 
+    deamon lair or take a joy ride on the dragon"""
 
-
+    print('You throw the fish to the dragon')
+    print('thank goodness you kept that fish')
+    print('the Dragon really seems to like it ....')
+    print("It makes a happy chirping noise") 
+    print("and pushes you with it's nose")
+    print("this Dragon isn't so bad after all")
+    print("You decide to climb on the Dragon's back")
+    print("do you take the dragon for a joyride arround the Deamon Realm")
+    print('or do you fly directly to the Deamon Kings castle in the mountain')
+    while True:
+        fly = input('joyride/castle')
+        if fly == 'joyride':
+            print('You climb onto the Dragons back')
+            print('The Dragon takes off flying high up in the sky')
+            print('The Dragon flys high towards the sun....')
+            print("It's scales heat up making it too hot to hold onto")
+            print("Then the dragon swoops down close to the sea")
+            print("You fall into the sea because you cant hold on")
+            print('The waster is freezing and you are unable to swim')
+            print('you sink to the bottom and drown')
+            print(pyfiglet.figlet_format('GAME', justify='center'))
+            print(pyfiglet.figlet_format('OVER!', justify='center'))
+            play_again()
+            break
+        elif fly == 'castle':
+            deamon_castle() 
+            break 
+        else:
+            print('Incorrect amswer please input joyride or castle')  
 
 
 def play_again():
