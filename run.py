@@ -7,6 +7,9 @@ import pyfiglet
 global fish
 fish = 'no'
 
+global flower
+flower = 'ignore'
+
 
 def open_image():
     """ Shows name of game and gets player name"""
@@ -304,11 +307,12 @@ def mountain():
     print('pick a flower to take with you')
     print('Ignore the flowers completely')
     while True:
+        global flower
         flower = input('(smell/pick/ignore)')  
         if flower == 'smell':
             print('You stop ans smell the flowers')
             print('They smell beautiful')
-            print('But they make youre nose ticlkle...')
+            print('But they make youre nose tickle...')
             print('These are no ordinary flowers...')
             print('The pollen has explosive qualities')
             print('unfortunately you have a large quantity')
@@ -324,17 +328,94 @@ def mountain():
         elif flower == 'pick':
             print('These flowers make come in handy later')
             print('you carefully wrap one up and put it in your pocket')
+            bear()
             break
         elif flower == 'ignore':
             print('There is no time to stop for flowers')
             print("I've got to save my sister")
+            bear()
             break
         else:
             print('incorrect answer please enter smell, pick or ignore')
             continue
-        bear()
+    
+
+def bear():
+    """ player continues up the mountain and has to pass a bear using tools
+    that have been picked up """
+    print('You continue up the mountain path')
+    print('It is getting steap')
+    print('and deanse with undergrowth')
+    print('you hear movement up ahead')
+    print('You turn the corner and you see....')
+    print('A BEAR!!!')
+    print("oh no, how are you going to get past a bear!!")
+    print('Do you run?')
+    print('Do you fight it with your bare hands?')
+    global fish
+    global flower
+    if fish == 'yes':
+        print('Do you give it the fish?')
+    if flower == 'pick':
+        print('Do you throw the flower at it')
+    if fish == 'yes' and flower == 'pick':
+        bear_input = ('run/fight/flower/fish')
+    if fish == 'yes' and flower == 'ignore':
+        bear_input = ('run/fight/fish')
+    if fish == 'no' and flower == 'pick':
+        bear_input = ('run/fight/flower')
+    if fish == 'no' and flower == 'ignore':
+        bear_input = ('run/fight')
+
+    while True:
+        beat_bear = input(f'Do you {bear_input}')
+        if beat_bear == 'run':
+            print('You try to run but you trip and fall')
+            print('Into a patch of those pint flowers')
+            print('Both you and the bear explode into a million pieces')
+            print(pyfiglet.figlet_format('GAME', justify='center'))
+            print(pyfiglet.figlet_format('OVER!', justify='center'))
+            play_again()
+            break
+        
+        elif beat_bear == 'fight':
+            print('There is no other option')
+            print('you take on the bear yourself')
+            print("but you're an ideot")
+            print("of course you can't beat a bear")
+            print("it's a friggin BEAR!!!")
+            print('It rips you limb from limb')
+            print(pyfiglet.figlet_format('GAME', justify='center'))
+            print(pyfiglet.figlet_format('OVER!', justify='center'))
+            play_again()
+            break
+        elif beat_bear == 'fish' and fish == 'yes':
+            print('Thank goodness you kept that fish')
+            print('You wave the fish in front of the bear')
+            print('and then throw it into the unergrowth')
+            print('the bear goes running after it')
+            print('you take your chance')
+            print('and leg it up the rest of the mountain')
+            deamon_castle()
+            break
+        elif beat_bear == 'flower' and flower == 'pick':
+            print('You remember the flower in your pocket')
+            print('You throw it at the bear')
+            print('It explodes killing the bear instantly')
+            print('you breath a sigh of relief')
+            print('and continue up the mountain')
+            deamon_castle()
+            break
+        else:
+            print(f'incorrect answer please input {bear_input}')
+            continue
+        
+        
 
 
+
+
+    
 
 
 def play_again():
