@@ -3,6 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 import pyfiglet
+import time
 
 global fish
 fish = 'no'
@@ -16,48 +17,74 @@ def open_image():
     print(pyfiglet.figlet_format('DEAMON', justify='center'))
     print(pyfiglet.figlet_format('QUEST', justify='center'))
 
-    name = input('If you wish to play please enter your name ')
-
+    name = input('If you wish to play please enter your name\n')
+    print()
+    time.sleep(2)
     print(f'Welcome {name}')
     intro()    
+    time.sleep(2)
 
 
 def intro():
     """ Sets the scene for the game using the players name and asks them 
     if they wish to proceed to the next section"""
     print()
-    print('It is a normal boring Saturday night.')
-    print('Your parents have gone out for the evening leaving you in charge')
-    print('your baby sister is sleeping upstairs in her bedroom')
-    print()
-    print('Suddenly you hear a strange noise coming from your sisters bedroom')
-    print('so you go upstairs to investigate')
-    print('As you approach the door you hear a strange chantinf sound coming from the room')
-    print('Full of fear you slowly open the door....')
-    print('Standing over your sisters cot is what looks like a man')
-    print('he is wearing black robes and has glowing red eyes')
-    print("He looks at you and says 'you are too late'")
-    print("'I am the Deamon King!'")
-    print("'Your sister is mine now. Im taking her back to the Deamon Realm'")
-    print("'and there is nothing you can do to stop me'")
-    print('In a flash of light he sends a sphere of light towards you')
-    print('There is no time to dodge it... it hits you square in the chest and knocks you unconcious')
-    print('When you wake up the room is dark and your sister and the Deamon King are gone')
-    print('You sit and cry for a moment ....')
-    print('Then you notice a small glowing orb underneath the cot')
-    print('It must have been dropped by the Deamon King')
+    print('It is a normal boring Saturday night. \n')
+    time.sleep(2)
+    print('Your parents have gone out for the evening leaving you in charge. \n')
+    time.sleep(2)
+    print('Your baby sister is sleeping upstairs in her bedroom. \n')
+    time.sleep(2)
+    print('Suddenly you hear a strange noise coming from your sisters bedroom...')
+    time.sleep(2)
+    print('You go upstairs to investigate... \n')
+    time.sleep(2)
+    print('As you approach the door, you hear a strange chanting sound \ncoming from her room... \n')
+    time.sleep(2)
+    print('Full of fear you slowly open the door.... \n')
+    time.sleep(2)
+    print('Standing over your sisters cot is what looks like a man. \n')
+    time.sleep(2)
+    print('He is wearing black robes and has glowing red eyes. \n')
+    time.sleep(2)
+    print('He looks at you and says "you are too late" \n')
+    time.sleep(2)
+    print('"I am the Deamon King!" \n')
+    time.sleep(2)
+    print('"Your sister is mine now. Im taking her back to the Deamon Realm"')
+    time.sleep(1)
+    print('"and there is nothing you can do to stop me".\n')
+    time.sleep(2)
+    print('In a flash of light he sends a sphere of light towards you. \n')
+    time.sleep(2)
+    print('There is no time to dodge it... \nit hits you square in the chest and knocks you unconcious \n')
+    time.sleep(3)
+    print('When you wake up the room is dark and your sister and \nthe Deamon King are gone \n')
+    time.sleep(3)
+    print('You sit and cry for a moment .... \n')
+    time.sleep(3)
+    print('Then you notice a small glowing orb underneath the cot \n')
+    time.sleep(2)
+    print('It must have been dropped by the Deamon King \n')
+    time.sleep(2)
     start_game()
 
 
 def start_game():
-    """ starts game, asks player if they wish to touch sphere if else yes not statement"""
+    """ starts game, asks player if they wish to touch sphere if else yes not 
+    statement"""
     while True:
         touch_orb = input('Do you touch the orb?  (yes/no) \n')
         if touch_orb == 'no':
-            print('How terribly brave of you! Just leave your sister to her fate')
-            print('Go and have a cup of tea and forget all about it')
+            print()
+            time.sleep(2)
+            print('How terribly brave of you! \nJust leave your sister to her fate \n')
+            time.sleep(2)
+            print('Go and have a cup of tea and forget all about it \n')
+            time.sleep(2)
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
+            time.sleep(2)
             play_again()
             break
         elif touch_orb == 'yes':
@@ -68,21 +95,38 @@ def start_game():
             continue
 
 def deamon_realm():
-    """Continues story in the Deamon Realm and intoroduces 3 doors to go through"""
-    print('You find yourself in a strange house')
-    print('out of the window you can see a dark and strange land')
-    print('you are definately no longer on earth')
-    print('You look arround the room you are in')
-    print('the room is almost completely bare')
-    print('there is a table in the corner with a piece of paper on it')
-    print('it is a note that reads...')
-    print('If you are reading this you found the travel orb i dropped')
-    print('You are either very brave or very stupid')
-    print('good luck in the Deamon Realm! you will need it!')
-    print('there are 3 doors')
-    print('to your right the door leads to a lake')
-    print('To your left the door leads to a field')
-    print('in front of you the door leads to a dark mountain')
+    """Continues story in the Deamon Realm and intoroduces 
+    3 doors to go through"""
+    print()
+    time.sleep(2)
+    print('You find yourself in a strange house.')
+    time.sleep(2)
+    print('Out of the window you can see a dark and strange land. \n')
+    time.sleep(2)
+    print('You are definately no longer on earth! \n')
+    time.sleep(2)
+    print('You look arround the room you are in \n')
+    time.sleep(2)
+    print('it is almost completely bare. \n')
+    time.sleep(2)
+    print('There is a table in the corner with a piece of paper on it. \n')
+    time.sleep(2)
+    print('It is a note that reads... \n')
+    time.sleep(2)
+    print('If you are reading this you found the travel orb I dropped \n')
+    time.sleep(2)
+    print('You are either very brave or very stupid! \n')
+    print('Good luck in the Deamon Realm! \nYou will need it! \n')
+    time.sleep(3)
+    print('There are 3 doors. \n')
+    print('To your right, the door leads to a lake. \n')
+    time.sleep(2)
+    print('To your left, the door leads to a field \n')
+    time.sleep(2)
+    print('In front of you, the door leads to a dark mountain')
+    time.sleep(2)
+    print('and the Deamon Kings Castle. \n')
+    time.sleep(2)
     while True:
         doors = input('Which way will go you? (left/right/front) \n')
         if doors == 'left':
@@ -100,20 +144,30 @@ def deamon_realm():
 
 def lake():
     """ takes you to the lake and asks you player if they want to go fishing"""
-    print('you take the left door...')
-    print('You walk down a winding path and find yourself at a large lake')
-    print('the water is black and it is surrounded by dark purple sand')
-    print('and strange eerie trees that have blood red leaves')
-    print('at the edge of the late there is a small wooden pier')
-    print('at the end of the pier there is a fishing rod set up')
-    print('It speems a little strange but ...')
+    print('you take the left door... \n')
+    time.sleep(2)
+    print('You walk down a winding path and find yourself at a large lake.\n')
+    time.sleep(2)
+    print('The water is black and it is surrounded by dark purple sand,')
+    time.sleep(2)
+    print('and strange eerie trees that have blood red leaves. \n')
+    time.sleep(2)
+    print('At the edge of the lake, there is a small wooden pier... \n')
+    time.sleep(2)
+    print('At the end of the pier, there is a fishing rod set up... \n')
+    time.sleep(2)
+    print('It seems a little strange but ... \n')
+    time.sleep(2)
     while True:
         fishing = input('would you like to go fishing? (yes/no) \n ')
         if fishing == 'yes':
             lets_fish()
             break
         elif fishing == 'no':
+            print()
+            time.sleep(2)
             print("There is no time to fish. You've got a sister to save!")
+            time.sleep(2)
             stay_at_lake()
             break
         else:
@@ -121,31 +175,43 @@ def lake():
             continue  
 
 def lets_fish():
-    """ Fishing choice, asks player if they would like to go fishing and keep the fish"""
+    """ Fishing choice, asks player if they would like to go fishing and keep 
+    the fish"""
     print()
+    time.sleep(2)
     print('You walk down the little pier and pick up the fishing rod') 
-    print('You cast the line into the water and take a seat in the little chair') 
-    print('that is next to the pole')      
-    print('after a few minutes you feel a sharp tug at the line..')
-    print('you quickly reel the line in')
-    print("you can't believe it")
-    print('you have actcually caught a fish....')
+    time.sleep(2)
+    print('You cast the line into the water \nand take a seat in the little chair. \n') 
+    time.sleep(2)  
+    print('After a few minutes you feel a sharp tug at the line.. \n')
+    time.sleep(2)
+    print('You quickly reel the line in... \n')
+    time.sleep(2)
+    print("You can't quite believe it... \n")
+    time.sleep(2)
+    print('You have actcually caught a fish!....\n')
     while True:
         global fish
         fish = input('Would you like to keep the fish (yes/no) \n')
         if fish == 'yes':
-            print('this fish might come in handy for something.')
-            print("It looks a bit gross but if i'm hungry enough maybe I could eat it myself")
-            print('you wrap it in some of the weird red leaves from the trees and take it with you')
+            time.sleep(2)
+            print('this fish might come in handy for something. \n')
+            time.sleep(2)
+            print("It looks a bit gross but if i'm hungry enough \nmaybe I could eat it myself \n")
+            time.sleep(2)
+            print('you wrap it in some of the weird red leaves from the trees \nand take it with you \n')
+            time.sleep(2)
             stay_at_lake()
             break
         elif fish == 'no':
-            print("I don't want to kill the fish and it's a bit gross")
-            print('you throw the fish back in the pond')
+            print("I don't want to kill the fish and it's a bit gross. \n")
+            time.sleep(2)
+            print('You throw the fish back in the pond \n')
+            time.sleep(2)
             stay_at_lake()
             break
         else:
-            print('Incorrect answer type yes or no.')
+            print('Incorrect answer type (yes or no).')
             continue
             
 
@@ -153,18 +219,28 @@ def stay_at_lake():
     """ Asks player if they would like to stay by the lake or if 
     they would like to move on with the game"""
     while True:
-        stay = input('Would you like to stay at the lake, go to the mountain, or go to the field? (stay/mountain/field) \n')
+        stay = input('Would you like to stay at the lake, go to the mountain, \nor go to the field? (stay/mountain/field) \n')
         if stay == 'stay':
-            print('This lake is really peaceful')
-            print('You decide to stay for a while')
-            print('The purple sand surrounding the lake looks really interesting')
-            print('You walk down to the edge of the water ')
-            print('You reach down and take a handfull of sand')
-            print('The moment your skin touches the sand it starts to move....')
-            print('the sand is actally millions of tiny bugs...')
-            print('You scream in pain as the bugs consume your entire body')
-            print('moments later there is just a pile of bones by the water')
+            print('This lake is really peaceful \n')
+            time.sleep(2)
+            print('You decide to stay for a while \n')
+            time.sleep(2)
+            print('The purple sand surrounding the lake looks really interesting...\n')
+            time.sleep(2)
+            print('You walk down to the edge of the water... \n')
+            time.sleep(2)
+            print('You reach down and take a handfull of sand... \n')
+            time.sleep(2)
+            print('The moment your skin touches the sand it starts to move....\n')
+            time.sleep(3)
+            print('the sand is actally millions of tiny bugs... \n')
+            time.sleep(3)
+            print('You scream in pain as the bugs consume your entire body... \n')
+            time.sleep(3)
+            print('moments later there is just a pile of bones by the water \n')
+            time.sleep(3)
             print('What a way to go!')
+            time.sleep(3)
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
@@ -184,16 +260,24 @@ def field():
     befriend the dragon,  if you have the fish you can win the dragon over, if not the dragon 
     will eat you"""
 
-    print('You set off along the path')
-    print('and find your self in an enormous field full of green and red flowers')
-    print('there seems to be a big hill in the middle of it...')
-    print('you head towards the hill to see if you can see anything from the top')
-    print('as you get close to the hill you realise it is moving....')
-    print('the hill unfolds and looks straight at you....')
-    print('Its not a hill.....')
-    print('Its a DRAGON......')
+    print('You set off along the path \n')
+    time.sleep(2)
+    print('and find your self in an enormous field full of green and red flowers. \n')
+    time.sleep(2)
+    print('There seems to be a big hill in the middle of it... \n')
+    time.sleep(2)
+    print('You head towards the hill to see if you can see anything from the top \n')
+    time.sleep(2)
+    print('as you get close to the hill you realise it is moving.... \n')
+    time.sleep(2)
+    print('The hill unfolds and looks straight at you....\n')
+    time.sleep(3)
+    print('Its not a hill.....\n')
+    time.sleep(3)
+    print('Its a DRAGON......\n')
+    time.sleep(2)
     while True:
-        dragon = input('Do you run, or try to befriend the dragon (run/befriend)')
+        dragon = input('Do you run, or try to befriend the dragon (run/befriend)\n')
         if dragon == 'run':
             run_from_dragon()
             break
@@ -208,32 +292,46 @@ def befriend_dragon():
     """gives the player the opportunity to befriend the dragon.  This will only work if the player
     has got the fish from the lake, otherwise the dragon will kill them"""
     print()
-    print('This dragon looks friendly enough you think to yourself ')
-    print("I'm sure I can whin it over")
-    print('You start to walk slowly towards the dragon....')
-    print('but as you step closer the dragon starts to make a low growling sound.....')
-    print("you're starting to wonder if you've made the correct decision.....")
-    print('What do you do?')
-    print('put your hand out to try and pet the dragon')
-    print("change you're mind and run")
+    print('This dragon looks friendly enough you think to yourself \n')
+    time.sleep(2)
+    print("I'm sure I can win it over \n" )
+    time.sleep(2)
+    print('You start to walk slowly towards the dragon...\n')
+    time.sleep(3)
+    print('But as you step closer the dragon starts to make a low growling sound..... \n')
+    time.sleep(3)
+    print("you're starting to wonder if you've made the correct decision..... \n")
+    time.sleep(2)
+    print('What do you do?\n')
+    time.sleep(2)
+    print('Put your hand out to try and pet the dragon? \n')
+    time.sleep(2)
+    print("Change you're mind and run?\n")
+    time.sleep(2)
     global fish
     if fish == 'yes':
-        print('give the Dragon the fish from the lake')
+        print('Give the Dragon the fish from the lake?\n')
     if fish == 'yes':
         dragon_input = ('Pet the dragon, Run or give the dragon the fish (pet/run/fish)')
     else:
         dragon_input = ('Pet the dragon or Run (pet/run)')
     while True:
-        dragon_taming = input(f'Do you {dragon_input}')
+        dragon_taming = input(f'Do you {dragon_input} \n')
         if dragon_taming == 'fish':
             new_dragon_friend()
         elif dragon_taming == 'pet':
-            print('You tentitively stretch out your and towards the dragons nose')
-            print('the dragon gives you a sniff.....')
-            print('but something is wrong...')
-            print('the dragon likes the smell of you for all the wrong reasons...')
-            print('before you can blink the dragon pounces...')
+            print('You tentitively stretch out your and towards the dragons nose \n')
+            time.sleep(2)
+            print('The dragon gives you a sniff.....\n')
+            time.sleep(2)
+            print('But something is wrong... \n')
+            time.sleep(2)
+            print('The dragon likes the smell of you for all the wrong reasons... \n')
+            time.sleep(2)
+            print('Before you can blink the dragon pounces...')
+            time.sleep(2)
             print('AND SWALLOWS YOU WHOLE!!!')
+            time.sleep(2)
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
@@ -247,14 +345,22 @@ def befriend_dragon():
 
 def run_from_dragon():
     """ defining what happens when the player runs from the dragon"""
-    print('The dragon is looking at you....')
-    print('You siese your moment and run as fast as you can away from the dragon')
-    print('The dragon leaps into the air and grabs you with its claws')
-    print('It takes you flying high into the air')
-    print('the dragon takes you high up into the mountain....')
-    print('and drops you into a nest....')
-    print('waiting in the nest are four hungry baby dragons.....')
-    print('who devour you instantly')
+    print('The dragon is looking at you....\n')
+    time.sleep(2)
+    print('You sieze your moment and run as fast as you can away from the dragon.\n')
+    time.sleep(2)
+    print('The dragon leaps into the air and grabs you with its claws.\n')
+    time.sleep(2)
+    print('It takes you flying high into the air. \n')
+    time.sleep(2)
+    print('The dragon takes you high up into the mountain....\n')
+    time.sleep(2)
+    print('and drops you into a nest....\n')
+    time.sleep(2)
+    print('Waiting in the nest are four hungry baby dragons.....\n')
+    time.sleep(2)
+    print('who devour you instantly\n')
+    time.sleep(2)
     print(pyfiglet.figlet_format('GAME', justify='center'))
     print(pyfiglet.figlet_format('OVER!', justify='center'))
     play_again()
@@ -262,77 +368,110 @@ def run_from_dragon():
 def new_dragon_friend():
     """ the player has the dragon on side and next must decide whether to go to the 
     deamon lair or take a joy ride on the dragon"""
-
-    print('You throw the fish to the dragon')
-    print('thank goodness you kept that fish')
-    print('the Dragon really seems to like it ....')
-    print("It makes a happy chirping noise") 
-    print("and pushes you with it's nose")
-    print("this Dragon isn't so bad after all")
-    print("You decide to climb on the Dragon's back")
-    print("do you take the dragon for a joyride arround the Deamon Realm")
-    print('or do you fly directly to the Deamon Kings castle in the mountain')
+    print('Thank goodness you kept that fish \n')
+    time.sleep(2)
+    print('You throw the fish to the dragon \n')
+    time.sleep(2)
+    print('The Dragon really seems to like it ....\n')
+    time.sleep(2)
+    print("It makes a happy chirping noise\n") 
+    time.sleep(2)
+    print("and pushes you with it's nose \n")
+    time.sleep(2)
+    print("This Dragon isn't so bad after all! \n")
+    time.sleep(2)
+    print("You decide to climb on the Dragon's back.")
+    time.sleep(2)
+    print("Do you take the dragon for a joyride arround the Deamon Realm?\n")
+    time.sleep(2)
+    print('or, do you fly directly to the Deamon Kings castle in the mountain?\n')
+    time.sleep(2)
     while True:
         fly = input('joyride/castle')
         if fly == 'joyride':
-            print('You climb onto the Dragons back')
-            print('The Dragon takes off flying high up in the sky')
-            print('The Dragon flys high towards the sun....')
-            print("It's scales heat up making it too hot to hold onto")
-            print("Then the dragon swoops down close to the sea")
-            print("You fall into the sea because you cant hold on")
-            print('The waster is freezing and you are unable to swim')
-            print('you sink to the bottom and drown')
+            print('You climb onto the Dragons back\n')
+            time.sleep(2)
+            print('The Dragon takes off flying high up in the sky\n')
+            time.sleep(2)
+            print('The Dragon flys high towards the sun....\n')
+            time.sleep(2)
+            print("It's scales heat up making it too hot to hold onto \n")
+            time.sleep(2)
+            print("Then the dragon swoops down close to the sea \n")
+            time.sleep(2)
+            print("You fall into the sea because you cant hold on\n")
+            time.sleep(2)
+            print('The water is freezing and you are unable to swim\n')
+            time.sleep(2)
+            print('You sink to the bottom and drown\n')
+            time.sleep(2)
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
             break
         elif fly == 'castle':
-            deamon_castle() 
+            deamon_castle_dragon() 
             break 
         else:
             print('Incorrect amswer please input joyride or castle')  
 
 
-            
-
 
 def mountain():
     """Plays when the player picks mountain path.  It gives the option 
     to collect an exploding flower"""
-    print('You climb the rocky mountain path')  
-    print('Growing alomg the sides are the most ')  
-    print('beautiful pink flowers')
-    print('Do you stop to smell the flowers')
-    print('pick a flower to take with you')
-    print('Ignore the flowers completely')
+    print('You climb the rocky mountain path \n')
+    time.sleep(2)
+    print('Growing along the sides are the most ')  
+    print('beautiful pink flowers\n')
+    time.sleep(2)
+    print('Do you stop to smell the flowers?\n')
+    time.sleep(2)
+    print('Do you pick a flower to take with you? \n')
+    time.sleep(2)
+    print('Or ignore the flowers completely \n')
+    time.sleep(2)
     while True:
         global flower
         flower = input('(smell/pick/ignore)')  
         if flower == 'smell':
-            print('You stop ans smell the flowers')
-            print('They smell beautiful')
-            print('But they make youre nose tickle...')
-            print('These are no ordinary flowers...')
-            print('The pollen has explosive qualities')
-            print('unfortunately you have a large quantity')
-            print('of pollen up your nose')
-            print('you try to hold in the sneeze')
-            print("but you can't")
-            print('You sneeze')
-            print('and your head explodes')
+            print('You stop ans smell the flowers \n')
+            time.sleep(2)
+            print('They smell beautiful \n')
+            time.sleep(2)
+            print('But they make youre nose tickle...\n')
+            time.sleep(2)
+            print('These are no ordinary flowers...\n')
+            time.sleep(3)
+            print('The pollen has explosive qualities...\n')
+            time.sleep(3)
+            print('Unfortunately you have a large quantity')
+            print('of pollen up your nose.\n')
+            time.sleep(3)
+            print('You try to hold in the sneeze..\n')
+            time.sleep(3)
+            print("But you can't!\n")
+            time.sleep(3)
+            print('You sneeze.....\n')
+            time.sleep(3)
+            print('Your head EXPLODES! \n')
+            time.sleep(2)
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
             break
         elif flower == 'pick':
-            print('These flowers make come in handy later')
-            print('you carefully wrap one up and put it in your pocket')
+            print('These flowers make come in handy later \n')
+            time.sleep(2)
+            print('you carefully wrap one up and put it in your pocket \n')
+            time.sleep(2)
             bear()
             break
         elif flower == 'ignore':
-            print('There is no time to stop for flowers')
-            print("I've got to save my sister")
+            print('There is no time to stop for flowers \n')
+            time.sleep(2)
+            print("I've got to save my sister \n")
+            time.sleep(2)
             bear()
             break
         else:
@@ -343,21 +482,32 @@ def mountain():
 def bear():
     """ player continues up the mountain and has to pass a bear using tools
     that have been picked up """
-    print('You continue up the mountain path')
-    print('It is getting steap')
-    print('and deanse with undergrowth')
-    print('you hear movement up ahead')
-    print('You turn the corner and you see....')
-    print('A BEAR!!!')
-    print("oh no, how are you going to get past a bear!!")
-    print('Do you run?')
-    print('Do you fight it with your bare hands?')
+    print('You continue up the mountain path \n')
+    time.sleep(2)
+    print('It is getting steap \n')
+    time.sleep(2)
+    print('and deanse with undergrowth \n')
+    time.sleep(2)
+    print('you hear movement up ahead \n')
+    time.sleep(2)
+    print('You turn the corner and you see.... \n')
+    time.sleep(3)
+    print('A BEAR!!! \n')
+    time.sleep(2)
+    print("oh no, how are you going to get past a bear!! \n")
+    time.sleep(2)
+    print('Do you run? \n')
+    time.sleep(2)
+    print('Do you fight it with your bare hands? \n')
+    time.sleep(2)
     global fish
     global flower
     if fish == 'yes':
-        print('Do you give it the fish?')
+        print('Do you give it the fish? \n')
+        time.sleep(2)
     if flower == 'pick':
-        print('Do you throw the flower at it')
+        print('Do you throw the flower at it \n')
+        time.sleep(2)
     if fish == 'yes' and flower == 'pick':
         bear_input = ('run/fight/flower/fish')
     if fish == 'yes' and flower == 'ignore':
@@ -368,49 +518,69 @@ def bear():
         bear_input = ('run/fight')
 
     while True:
-        beat_bear = input(f'Do you {bear_input}')
+        beat_bear = input(f'Do you {bear_input} \n')
         if beat_bear == 'run':
-            print('You try to run but you trip and fall')
-            print('Into a patch of those pint flowers')
-            print('Both you and the bear explode into a million pieces')
+            time.sleep(2)
+            print('You try to run but you trip and fall \n')
+            time.sleep(2)
+            print('Into a patch of those pint flowers \n')
+            time.sleep(2)
+            print('Both you and the bear explode into a million pieces \n')
+            time.sleep(2)
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
             break
         
         elif beat_bear == 'fight':
-            print('There is no other option')
-            print('you take on the bear yourself')
-            print("but you're an ideot")
-            print("of course you can't beat a bear")
-            print("it's a friggin BEAR!!!")
-            print('It rips you limb from limb')
+            print('There is no other option \n')
+            time.sleep(2)
+            print('you take on the bear yourself \n')
+            time.sleep(2)
+            print("but you're an ideot \n")
+            time.sleep(2)
+            print("of course you can't beat a bear \n")
+            time.sleep(2)
+            print("it's a friggin BEAR!!! \n")
+            time.sleep(2)
+            print('It rips you limb from limb \n')
+            time.sleep(2)
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
             break
         elif beat_bear == 'fish' and fish == 'yes':
-            print('Thank goodness you kept that fish')
-            print('You wave the fish in front of the bear')
-            print('and then throw it into the unergrowth')
-            print('the bear goes running after it')
-            print('you take your chance')
-            print('and leg it up the rest of the mountain')
+            print('Thank goodness you kept that fish \n')
+            time.sleep(2)
+            print('You wave the fish in front of the bear\n')
+            time.sleep(2)
+            print('and then throw it into the unergrowth \n')
+            time.sleep(2)
+            print('the bear goes running after it \n')
+            time.sleep(2)
+            print('you take your chance ')
+            print('and leg it up the rest of the mountain \n')
+            time.sleep(2)
             deamon_castle()
             break
         elif beat_bear == 'flower' and flower == 'pick':
-            print('You remember the flower in your pocket')
-            print('You throw it at the bear')
-            print('It explodes killing the bear instantly')
-            print('you breath a sigh of relief')
-            print('and continue up the mountain')
-            deamon_castle()
+            print('You remember the flower in your pocket \n')
+            time.sleep(2)
+            print('You throw it at the bear \n')
+            time.sleep(2)
+            print('It explodes killing the bear instantly \n')
+            time.sleep(2)
+            print('you breath a sigh of relief \n')
+            time.sleep(2)
+            print('and continue up the mountain\n')
+            time.sleep(2)
+            deamon_castle_mountain()
             break
         else:
             print(f'incorrect answer please input {bear_input}')
             continue
         
-        
+
 
 
 
