@@ -11,6 +11,8 @@ fish = 'no'
 global flower
 flower = 'ignore'
 
+global beat_bear
+beat_bear = 'run'
 
 def open_image():
     """ Shows name of game and gets player name"""
@@ -502,6 +504,7 @@ def bear():
     time.sleep(2)
     global fish
     global flower
+    global beat_bear
     if fish == 'yes':
         print('Do you give it the fish? \n')
         time.sleep(2)
@@ -530,8 +533,7 @@ def bear():
             print(pyfiglet.figlet_format('GAME', justify='center'))
             print(pyfiglet.figlet_format('OVER!', justify='center'))
             play_again()
-            break
-        
+            break      
         elif beat_bear == 'fight':
             print('There is no other option \n')
             time.sleep(2)
@@ -561,7 +563,7 @@ def bear():
             print('you take your chance ')
             print('and leg it up the rest of the mountain \n')
             time.sleep(2)
-            deamon_castle()
+            deamon_castle_mountain()
             break
         elif beat_bear == 'flower' and flower == 'pick':
             print('You remember the flower in your pocket \n')
@@ -579,13 +581,7 @@ def bear():
         else:
             print(f'incorrect answer please input {bear_input}')
             continue
-        
 
-
-
-
-
-    
 
 
 def play_again():
