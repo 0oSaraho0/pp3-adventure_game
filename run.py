@@ -4,6 +4,7 @@
 
 import pyfiglet
 import time
+import os
 
 
 global fish
@@ -85,10 +86,7 @@ def start_game():
             time.sleep(2)
             print('Go and have a cup of tea and forget all about it \n')
             time.sleep(2)
-            print(pyfiglet.figlet_format('GAME', justify='center'))
-            print(pyfiglet.figlet_format('OVER!', justify='center'))
-            time.sleep(2)
-            play_again()
+            game_over()
             break
         elif touch_orb == 'yes':
             deamon_realm()
@@ -244,9 +242,7 @@ def stay_at_lake():
             time.sleep(3)
             print('What a way to go!')
             time.sleep(3)
-            print(pyfiglet.figlet_format('GAME', justify='center'))
-            print(pyfiglet.figlet_format('OVER!', justify='center'))
-            play_again()
+            game_over()
             break
         elif stay == 'mountain':
             mountain()
@@ -335,9 +331,7 @@ def befriend_dragon():
             time.sleep(2)
             print('AND SWALLOWS YOU WHOLE!!!')
             time.sleep(2)
-            print(pyfiglet.figlet_format('GAME', justify='center'))
-            print(pyfiglet.figlet_format('OVER!', justify='center'))
-            play_again()
+            game_over()
             break
         elif dragon_taming == 'run':
             run_from_dragon()
@@ -364,9 +358,7 @@ def run_from_dragon():
     time.sleep(2)
     print('who devour you instantly\n')
     time.sleep(2)
-    print(pyfiglet.figlet_format('GAME', justify='center'))
-    print(pyfiglet.figlet_format('OVER!', justify='center'))
-    play_again()
+    game_over()
 
 def new_dragon_friend():
     """ the player has the dragon on side and next must decide whether to go to the 
@@ -408,9 +400,7 @@ def new_dragon_friend():
             time.sleep(2)
             print('You sink to the bottom and drown\n')
             time.sleep(2)
-            print(pyfiglet.figlet_format('GAME', justify='center'))
-            print(pyfiglet.figlet_format('OVER!', justify='center'))
-            play_again()
+            game_over()
             break
         elif fly == 'castle':
             deamon_castle_dragon() 
@@ -459,9 +449,7 @@ def mountain():
             time.sleep(3)
             print('Your head EXPLODES! \n')
             time.sleep(2)
-            print(pyfiglet.figlet_format('GAME', justify='center'))
-            print(pyfiglet.figlet_format('OVER!', justify='center'))
-            play_again()
+            game_over()
             break
         elif flower == 'pick':
             print('These flowers make come in handy later \n')
@@ -531,9 +519,7 @@ def bear():
             time.sleep(2)
             print('Both you and the bear explode into a million pieces \n')
             time.sleep(2)
-            print(pyfiglet.figlet_format('GAME', justify='center'))
-            print(pyfiglet.figlet_format('OVER!', justify='center'))
-            play_again()
+            game_over()
             break      
         elif beat_bear == 'fight':
             print('There is no other option \n')
@@ -634,6 +620,7 @@ def deamon_castle_dragon():
             print('Which unfortunately hits you both')
             time.sleep(2)
             print('You were so close.....')
+            time.sleep(2)
             game_over()
             break
         elif defeat == 'sister':
@@ -677,7 +664,8 @@ def deamon_castle_dragon():
             print('and see the DRAGON sitting in your paddling pool......\n')
             time.sleep(2)
             print('But that is an adventure for another day!')
-            print('WINNER')
+            time.sleep(2)
+            winner()
             play_again()
         else:
             print('Incorrect answer, pleaser input sister or deamon')
@@ -762,7 +750,7 @@ def deamon_castle_mountain():
             time.sleep(2)
             print("You've had quite enough adventure for one day\n")
             time.sleep(2)
-            print('WINNER')
+            winner()
             break
         elif deamon_attack == 'fight':
             print("You can't quite believe you got here completely unarmed \n")
@@ -792,7 +780,28 @@ def deamon_castle_mountain():
             print(f'Incorrect answer please type {end_game}')
             continue
 
+def game_over():
+    """ runs game over text through a loop and links to play again function"""
 
+    lose = 'GAME \nOVER!'
+    y = 0
+    while y <= len(lose):
+        os.system('clear')
+        print(pyfiglet.figlet_format(lose[:y],justify='center'))
+        time.sleep(0.3)
+        y = y+1
+    play_again()    
+
+def winner():
+    """ runs winner text through a loop and links to play again function"""
+    win = 'WINNER!'
+    y = 0
+    while y <= len(win):
+        os.system('clear')
+        print(pyfiglet.figlet_format(win[:y],justify='center'))
+        time.sleep(0.3)
+        y = y+1
+    play_again()
 
 def play_again():
     """ Called each time the player wins or loses.  
@@ -809,9 +818,6 @@ def play_again():
             break
         else:
             print('Incorrect answer please type yes or no')
-
-
-
 
 
 open_image()    
