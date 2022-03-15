@@ -16,21 +16,28 @@ flower = 'ignore'
 global beat_bear
 beat_bear = 'run'
 
+
 def open_image():
     """ Shows name of game and gets player name"""
     print(pyfiglet.figlet_format('DEAMON', justify='center'))
     print(pyfiglet.figlet_format('QUEST', justify='center'))
-
-    name = input('If you wish to play please enter your name\n')
-    print()
-    time.sleep(2)
-    print(f'Welcome {name}')
-    intro()    
-    time.sleep(2)
+    
+    while True:
+        name = input('If you wish to play please enter your name\n')
+        if name == "":
+            print('Incorrect input.  Please enter your name')
+            continue
+        else:
+            print()
+            time.sleep(2)
+            print(f'Welcome {name}')
+            break
+    intro()
+    time.sleep(3)
 
 
 def intro():
-    """ Sets the scene for the game using the players name and asks them 
+    """ Sets the scene for the game using the players name and asks them
     if they wish to proceed to the next section"""
     print()
     print('It is a normal boring Saturday night. \n')
@@ -75,7 +82,7 @@ def intro():
 
 
 def start_game():
-    """ starts game, asks player if they wish to touch sphere if else yes not 
+    """ starts game, asks player if they wish to touch sphere if else yes not
     statement"""
     while True:
         touch_orb = input('Do you touch the orb?  (yes/no) \n')
@@ -95,8 +102,9 @@ def start_game():
             print('Incorrect answer type yes or no \n')
             continue
 
+
 def deamon_realm():
-    """Continues story in the Deamon Realm and intoroduces 
+    """Continues story in the Deamon Realm and intoroduces
     3 doors to go through"""
     print()
     time.sleep(2)
@@ -143,6 +151,7 @@ def deamon_realm():
             print('incorrect answer you must enter left right or front')
             continue
 
+
 def lake():
     """ takes you to the lake and asks you player if they want to go fishing"""
     print('you take the left door... \n')
@@ -174,6 +183,7 @@ def lake():
         else:
             print('Incorrect answer type yes or no')
             continue  
+
 
 def lets_fish():
     """ Fishing choice, asks player if they would like to go fishing and keep 
@@ -254,6 +264,7 @@ def stay_at_lake():
             print('Incorrect answer please type stay mountain or field')
             continue
 
+
 def field():
     """ plays when the payler chooses to go to the field, here you find the dragon can choose 
     befriend the dragon,  if you have the fish you can win the dragon over, if not the dragon 
@@ -287,13 +298,14 @@ def field():
             print('Incorrect answer please type run or befriend')
             continue
 
+
 def befriend_dragon():
     """gives the player the opportunity to befriend the dragon.  This will only work if the player
     has got the fish from the lake, otherwise the dragon will kill them"""
     print()
     print('This dragon looks friendly enough you think to yourself \n')
     time.sleep(2)
-    print("I'm sure I can win it over \n" )
+    print("I'm sure I can win it over \n")
     time.sleep(2)
     print('You start to walk slowly towards the dragon...\n')
     time.sleep(3)
@@ -360,6 +372,7 @@ def run_from_dragon():
     time.sleep(2)
     game_over()
 
+
 def new_dragon_friend():
     """ the player has the dragon on side and next must decide whether to go to the 
     deamon lair or take a joy ride on the dragon"""
@@ -407,7 +420,6 @@ def new_dragon_friend():
             break 
         else:
             print('Incorrect amswer please input joyride or castle')  
-
 
 
 def mountain():
@@ -569,6 +581,7 @@ def bear():
             print(f'incorrect answer please input {bear_input}')
             continue
         
+
 def deamon_castle_dragon():
     """ final stage for the dragon path through the game, the player can choose to fight the deamon or save their sister"""
     print('You fly on the dragons back \n')   
@@ -671,6 +684,7 @@ def deamon_castle_dragon():
             print('Incorrect answer, pleaser input sister or deamon')
             continue
 
+
 def deamon_castle_mountain():
     """ Final stage for the mountain pathway through the game, if the player still has the flower they will win"""
     print('You make your way into the Deamon Kings Castle \n')
@@ -708,7 +722,7 @@ def deamon_castle_mountain():
     else:
         print('Do you try and fight him? \n')
         time.sleep(2)
-        print('Do you try and grab your sister and leg it? \n')  
+        print('Do you try and grab your sister and leg it? \n')
         time.sleep(2)
         end_game = ('(fight/run)')
     while True:
@@ -780,6 +794,7 @@ def deamon_castle_mountain():
             print(f'Incorrect answer please type {end_game}')
             continue
 
+
 def game_over():
     """ runs game over text through a loop and links to play again function"""
 
@@ -787,10 +802,11 @@ def game_over():
     y = 0
     while y <= len(lose):
         os.system('clear')
-        print(pyfiglet.figlet_format(lose[:y],justify='center'))
+        print(pyfiglet.figlet_format(lose[:y], justify='center'))
         time.sleep(0.3)
         y = y+1
-    play_again()    
+    play_again()
+
 
 def winner():
     """ runs winner text through a loop and links to play again function"""
@@ -798,16 +814,16 @@ def winner():
     y = 0
     while y <= len(win):
         os.system('clear')
-        print(pyfiglet.figlet_format(win[:y],justify='center'))
+        print(pyfiglet.figlet_format(win[:y], justify='center'))
         time.sleep(0.3)
         y = y+1
     play_again()
 
+
 def play_again():
-    """ Called each time the player wins or loses.  
+    """ Called each time the player wins or loses.
     askes the player if they would like to play again and
-    takes them to the start screen if the do or thanks them for 
-    playing"""
+    takes them to the start screen if the do or thanks them for playing"""
     while True:
         play = input('Would you like to play again? (yes/no) \n')
         if play == 'yes':
@@ -820,4 +836,4 @@ def play_again():
             print('Incorrect answer please type yes or no')
 
 
-open_image()    
+open_image()
