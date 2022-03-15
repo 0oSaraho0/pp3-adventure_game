@@ -5,6 +5,7 @@
 import pyfiglet
 import time
 
+
 global fish
 fish = 'no'
 
@@ -583,6 +584,7 @@ def bear():
             continue
         
 def deamon_castle_dragon():
+    """ final stage for the dragon path through the game, the player can choose to fight the deamon or save their sister"""
     print('You fly on the dragons back \n')   
     time.sleep(2)
     print('Straight to the Deamon Kings castle \n ')   
@@ -681,8 +683,114 @@ def deamon_castle_dragon():
             print('Incorrect answer, pleaser input sister or deamon')
             continue
 
-
-
+def deamon_castle_mountain():
+    """ Final stage for the mountain pathway through the game, if the player still has the flower they will win"""
+    print('You make your way into the Deamon Kings Castle \n')
+    time.sleep(2)
+    print("It's a dark and scary building \n")
+    time.sleep(2)
+    print('with long and winding hallways\n')
+    time.sleep(2)
+    print('You find your way to the room the Deamon King is in\n')
+    time.sleep(2)
+    print('As you enter, he looks at you and laughs\n')
+    time.sleep(2)
+    print("I've been expecting you, although I'm surprised you made it! \n")
+    time.sleep(2)
+    print('You see your sister in a cot at the side of the room\n')
+    time.sleep(2)
+    print('you say "Give me my sister"\n')
+    time.sleep(2)
+    print('He laughs again \n')
+    time.sleep(2)
+    print('How exactly are you going to make me do that\n')
+    time.sleep(2)
+    print('you say" ahha... I will show you" \n')
+    time.sleep(3)
+    print('You have no idea how to beat him \n')
+    time.sleep(2)
+    global flower
+    global beat_bear
+    if flower == 'pick' and beat_bear == 'fish': 
+        print('You remember the flower in your pocket \n')
+        time.sleep(2)
+        print('Do you throw it at the Deamon? \n')
+        time.sleep(2)
+        end_game = ('(flower/fight/run)')
+    else:
+        print('Do you try and fight him? \n')
+        time.sleep(2)
+        print('Do you try and grab your sister and leg it? \n')  
+        time.sleep(2)
+        end_game = ('(fight/run)')
+    while True:
+        deamon_attack = input(f'Do you {end_game} \n')
+        if deamon_attack == 'flower':
+            print('You carefully and discreetly \npull the flower from your pocket \n')
+            time.sleep(2)
+            print('The deamon has his guard down \n')
+            time.sleep(2)
+            print('He thinks there is nothing you can do \n')
+            time.sleep(2)
+            print('You throw the flower as hard as you can towards him \n')
+            time.sleep(2)
+            print('A look of shock and horror appears on his face....\n')
+            time.sleep(3)
+            print('Seconds before the flower explodes in front of him \n')
+            time.sleep(3)
+            print('You grab your sister....\n')
+            time.sleep(3)
+            print('There is a flash of light that knocks you over \n')
+            time.sleep(3)
+            print(' when you open you eyes \n')
+            time.sleep(2)
+            print('You are on your sofa in your living room \n')
+            time.sleep(2)
+            print('You race upstairs to your sisters bedroom')
+            time.sleep(2)
+            print('She is safely in her cot')
+            time.sleep(2)
+            print('you breath a hugh sigh if relief')
+            time.sleep(2)
+            print('It must have been an awful nightmare.. \n')
+            time.sleep(2)
+            print('you sink to your knees\n')
+            time.sleep(2)
+            print('and notice the glowing orb is still there\n')
+            time.sleep(2)
+            print('you decide not to touch it this time\n')
+            time.sleep(2)
+            print("You've had quite enough adventure for one day\n")
+            time.sleep(2)
+            print('WINNER')
+            break
+        elif deamon_attack == 'fight':
+            print("You can't quite believe you got here completely unarmed \n")
+            time.sleep(2)
+            print('what on earth were you thinking!\n')
+            time.sleep(2)
+            print('You take a deap breath and run at the Deamon King \n')
+            time.sleep(2)
+            print("You don't even get close\n")
+            time.sleep(2)
+            print('The last thing you hear is his evil cackle as he vapourises you\n')
+            time.sleep(2)
+            game_over()
+            break
+        elif deamon_attack == 'run':
+            print('You make a dash for your sister\n')
+            time.sleep(2)
+            print("But you don't even get close\n")
+            time.sleep(2)
+            print('He sends a fireball at you\n')
+            time.sleep(2)
+            print('You were so close...')
+            time.sleep(3)
+            game_over()
+            break
+        else:
+            print(f'Incorrect answer please type {end_game}')
+            continue
 
 
 
