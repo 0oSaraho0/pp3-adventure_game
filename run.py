@@ -1,8 +1,7 @@
 
 import os
-import pyfiglet
 import time
-
+import pyfiglet
 
 global fish
 fish = 'no'
@@ -15,7 +14,8 @@ beat_bear = 'run'
 
 
 def open_image():
-    """ Shows name of game and gets player name"""
+    """ Shows name of game and gets player name. runs if else statement to
+    ensure name is input, links to game intro function"""
     print(pyfiglet.figlet_format('DEAMON', justify='center'))
     print(pyfiglet.figlet_format('QUEST', justify='center'))
     while True:
@@ -33,8 +33,8 @@ def open_image():
 
 
 def intro():
-    """ Sets the scene for the game using the players name and asks them
-    if they wish to proceed to the next section"""
+    """ Sets the scene for the game using print statements.
+    links to start game function"""
     print()
     print('It is a normal boring Saturday night. \n')
     time.sleep(2)
@@ -83,8 +83,9 @@ def intro():
 
 
 def start_game():
-    """ starts game, asks player if they wish to touch sphere if else yes not
-    statement"""
+    """ starts game, asks player if they wish to touch sphere uses if else
+    statement.  If yes links to deamon_realm function if no links to game
+    over function. Uses while loop to ensure correct input word is entered"""
     while True:
         touch_orb = input('Do you touch the orb?  (yes/no) \n')
         if touch_orb == 'no':
@@ -107,7 +108,9 @@ def start_game():
 
 def deamon_realm():
     """Continues story in the Deamon Realm and intoroduces
-    3 doors to go through"""
+    3 doors to go through player can choose left right or front.
+    using and if else statement and while loop.  left connects to lake function
+    right connects to field function and front connects to mountain function"""
     print()
     time.sleep(2)
     print('You find yourself in a strange house.')
@@ -155,7 +158,9 @@ def deamon_realm():
 
 
 def lake():
-    """ takes you to the lake and asks you player if they want to go fishing"""
+    """ takes you to the lake and asks you player if they want to go fishing,
+    uses if else statement if yes links to lets_fish function, if no
+    links to stay_at_lake function """
     print('you take the left door... \n')
     time.sleep(2)
     print('You walk down a winding path and find yourself at a large lake.\n')
@@ -188,8 +193,9 @@ def lake():
 
 
 def lets_fish():
-    """ Fishing choice, asks player if they would like to go fishing and keep
-    the fish"""
+    """ follows the story and the player goes fishing, if else
+    stament asks if the player would like to keep the fish.  both yes
+    and no options link to stay_at_lake function"""
     print()
     time.sleep(2)
     print('You walk down the little pier and pick up the fishing rod')
@@ -232,8 +238,10 @@ def lets_fish():
 
 
 def stay_at_lake():
-    """ Asks player if they would like to stay by the lake or if
-    they would like to move on with the game"""
+    """ If else statement, asks player if they would like to navigate to the
+    mountainfield or stay at lake.  Mountain option links to mountain
+    function. field links to field function
+    and stay leads to game_over function"""
     while True:
         stay = input('Would you like to stay at the lake, go to the,' +
                      'mountain \nor go to the field? (stay/mountain/field) \n')
@@ -277,8 +285,8 @@ def stay_at_lake():
 
 def field():
     """ plays when the payler chooses to go to the field, here you find the
-    dragon can choose befriend the dragon,  if you have the fish you can
-    win the dragon over, if not the dragon will eat you"""
+    dragon can choose befriend the dragon or run. befriend leads to the
+    befriend_dragon function, run leads to the run_from_dragon function"""
 
     print('You set off along the path \n')
     time.sleep(2)
@@ -314,8 +322,11 @@ def field():
 
 def befriend_dragon():
     """gives the player the opportunity to befriend the dragon.  This will
-    only work if the player has got the fish from the lake, otherwise the
-    dragon will kill them"""
+    only work if the player has got the fish from the lake,  uses a global
+    variable of fish input fish links to new_dragon_friend function. Run
+    leads to run_from_dragon function and pet inputs lead to game over
+    function.  Uses dragon_input variable to give player the correct
+    options in the input statements"""
     print()
     print('This dragon looks friendly enough you think to yourself \n')
     time.sleep(2)
@@ -371,7 +382,8 @@ def befriend_dragon():
 
 
 def run_from_dragon():
-    """ defining what happens when the player runs from the dragon"""
+    """ defining what happens when the player runs from the dragon.
+    connects to game_over function"""
     print('The dragon is looking at you....\n')
     time.sleep(2)
     print('You sieze your moment and run' +
@@ -394,7 +406,8 @@ def run_from_dragon():
 
 def new_dragon_friend():
     """ the player has the dragon on side and next must decide whether to go to the
-    deamon lair or take a joy ride on the dragon"""
+    deamon lair or take a joy ride on the dragon. castle option links to the
+    deamon_castle_dragon option and joyride links to the game_over function"""
     print('Thank goodness you kept that fish \n')
     time.sleep(2)
     print('You throw the fish to the dragon \n')
@@ -444,7 +457,8 @@ def new_dragon_friend():
 
 def mountain():
     """Plays when the player picks mountain path.  It gives the option
-    to collect an exploding flower"""
+    to collect an exploding flower pick and ignore options link to bear
+    function smell links to game_over function"""
     print('You climb the rocky mountain path \n')
     time.sleep(2)
     print('Growing along the sides are the most ')
@@ -503,8 +517,10 @@ def mountain():
 
 
 def bear():
-    """ player continues up the mountain and has to pass a bear using tools
-    that have been picked up """
+    """ player continues up the mountain and has to pass a bear.  uses global
+    variables fish and flower.  fish and flower input lead to
+    deamon_castle_mountain function run and fight lead to game_over function
+    Uses bear_input variable to give player correct options"""
     print('You continue up the mountain path \n')
     time.sleep(2)
     print('It is getting steap \n')
@@ -540,7 +556,6 @@ def bear():
         bear_input = ('run/fight/flower')
     if fish == 'no' and flower == 'ignore':
         bear_input = ('run/fight')
-
     while True:
         beat_bear = input(f'Do you {bear_input} \n')
         if beat_bear == 'run':
@@ -566,9 +581,7 @@ def bear():
             time.sleep(2)
             print('It rips you limb from limb \n')
             time.sleep(2)
-            print(pyfiglet.figlet_format('GAME', justify='center'))
-            print(pyfiglet.figlet_format('OVER!', justify='center'))
-            play_again()
+            game_over()
             break
         elif beat_bear == 'fish' and fish == 'yes':
             print('Thank goodness you kept that fish \n')
@@ -604,7 +617,8 @@ def bear():
 
 def deamon_castle_dragon():
     """ final stage for the dragon path through the game, the player can
-    choose to fight the deamon or save their sister"""
+    choose to fight the deamon or save their sister deamon input links to
+    game_over function, sister leads to winner function"""
     print('You fly on the dragons back \n')
     time.sleep(2)
     print('Straight to the Deamon Kings castle \n ')
@@ -709,8 +723,8 @@ def deamon_castle_dragon():
 
 def deamon_castle_mountain():
     """ Final stage for the mountain pathway through the game, if the player
-    still has the flower they will win. contains while loop and if
-    else statement"""
+    still has the flower and iputs flower links to winner function, if player
+    inputs run or fight links to game_over function """
     print('You make your way into the Deamon Kings Castle \n')
     time.sleep(2)
     print("It's a dark and scary building \n")
@@ -822,7 +836,10 @@ def deamon_castle_mountain():
 
 
 def game_over():
-    """ runs game over text through a loop and links to play again function"""
+    """ runs game over text through a loop using os inport make the letters
+    appear one at at a time. uses pyfiglet to make the letters
+    decorative and time.sleep to delay the loop timelinks to
+    play_again function"""
 
     lose = 'GAME \nOVER!'
     y = 0
@@ -835,7 +852,10 @@ def game_over():
 
 
 def winner():
-    """ runs winner text through a loop and links to play again function"""
+    """ runs winner text through a loop using os inport make the letters
+    appear one at at a time. uses pyfiglet to make the letters
+    decorative and time.sleep to delay the loop timelinks to
+    play_again function"""
     win = 'WINNER!'
     y = 0
     while y <= len(win):
@@ -849,7 +869,8 @@ def winner():
 def play_again():
     """ Called each time the player wins or loses.
     askes the player if they would like to play again and
-    takes them to the start screen if the do or thanks them for playing"""
+    takes them to the start screen if the do or thanks them for playing
+    and exits the game"""
     while True:
         play = input('Would you like to play again? (yes/no) \n')
         if play == 'yes':
@@ -857,7 +878,7 @@ def play_again():
             break
         elif play == 'no':
             print('Thank you for playing! Hope to see you again soon!')
-            break
+            exit()
         else:
             print('Incorrect answer please type yes or no')
 
