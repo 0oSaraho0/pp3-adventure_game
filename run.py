@@ -1,10 +1,7 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+import os
 import pyfiglet
 import time
-import os
 
 
 global fish
@@ -21,7 +18,6 @@ def open_image():
     """ Shows name of game and gets player name"""
     print(pyfiglet.figlet_format('DEAMON', justify='center'))
     print(pyfiglet.figlet_format('QUEST', justify='center'))
-    
     while True:
         name = input('If you wish to play please enter your name\n')
         if name == "":
@@ -42,15 +38,18 @@ def intro():
     print()
     print('It is a normal boring Saturday night. \n')
     time.sleep(2)
-    print('Your parents have gone out for the evening leaving you in charge. \n')
+    print('Your parents have gone out for the evening leaving you in charge.')
+    print()
     time.sleep(2)
     print('Your baby sister is sleeping upstairs in her bedroom. \n')
     time.sleep(2)
-    print('Suddenly you hear a strange noise coming from your sisters bedroom...')
+    print('Suddenly you hear a strange noise coming' +
+          'from your sisters bedroom...')
     time.sleep(2)
     print('You go upstairs to investigate... \n')
     time.sleep(2)
-    print('As you approach the door, you hear a strange chanting sound \ncoming from her room... \n')
+    print('As you approach the door, you hear a strange chanting sound')
+    print('coming from her room... \n')
     time.sleep(2)
     print('Full of fear you slowly open the door.... \n')
     time.sleep(2)
@@ -68,9 +67,11 @@ def intro():
     time.sleep(2)
     print('In a flash of light he sends a sphere of light towards you. \n')
     time.sleep(2)
-    print('There is no time to dodge it... \nit hits you square in the chest and knocks you unconcious \n')
+    print('There is no time to dodge it...')
+    print('it hits you square in the chest and knocks you unconcious \n')
     time.sleep(3)
-    print('When you wake up the room is dark and your sister and \nthe Deamon King are gone \n')
+    print('When you wake up the room is dark and your sister and')
+    print('the Deamon King are gone \n')
     time.sleep(3)
     print('You sit and cry for a moment .... \n')
     time.sleep(3)
@@ -89,7 +90,8 @@ def start_game():
         if touch_orb == 'no':
             print()
             time.sleep(2)
-            print('How terribly brave of you! \nJust leave your sister to her fate \n')
+            print('How terribly brave of you! \n')
+            print('Just leave your sister to her fate \n')
             time.sleep(2)
             print('Go and have a cup of tea and forget all about it \n')
             time.sleep(2)
@@ -182,18 +184,19 @@ def lake():
             break
         else:
             print('Incorrect answer type yes or no')
-            continue  
+            continue
 
 
 def lets_fish():
-    """ Fishing choice, asks player if they would like to go fishing and keep 
+    """ Fishing choice, asks player if they would like to go fishing and keep
     the fish"""
     print()
     time.sleep(2)
-    print('You walk down the little pier and pick up the fishing rod') 
+    print('You walk down the little pier and pick up the fishing rod')
     time.sleep(2)
-    print('You cast the line into the water \nand take a seat in the little chair. \n') 
-    time.sleep(2)  
+    print('You cast the line into the water')
+    print('and take a seat in the little chair. \n')
+    time.sleep(2)
     print('After a few minutes you feel a sharp tug at the line.. \n')
     time.sleep(2)
     print('You quickly reel the line in... \n')
@@ -208,9 +211,11 @@ def lets_fish():
             time.sleep(2)
             print('this fish might come in handy for something. \n')
             time.sleep(2)
-            print("It looks a bit gross but if i'm hungry enough \nmaybe I could eat it myself \n")
+            print("It looks a bit gross but if i'm hungry enough")
+            print("maybe I could eat it myself \n")
             time.sleep(2)
-            print('you wrap it in some of the weird red leaves from the trees \nand take it with you \n')
+            print('you wrap it in some of the weird red leaves from the trees')
+            print('and take it with you \n')
             time.sleep(2)
             stay_at_lake()
             break
@@ -224,31 +229,36 @@ def lets_fish():
         else:
             print('Incorrect answer type (yes or no).')
             continue
-            
+
 
 def stay_at_lake():
-    """ Asks player if they would like to stay by the lake or if 
+    """ Asks player if they would like to stay by the lake or if
     they would like to move on with the game"""
     while True:
-        stay = input('Would you like to stay at the lake, go to the mountain, \nor go to the field? (stay/mountain/field) \n')
+        stay = input('Would you like to stay at the lake, go to the,' +
+                     'mountain \nor go to the field? (stay/mountain/field) \n')
         if stay == 'stay':
             print('This lake is really peaceful \n')
             time.sleep(2)
             print('You decide to stay for a while \n')
             time.sleep(2)
-            print('The purple sand surrounding the lake looks really interesting...\n')
+            print('The purple sand surrounding the lake ' +
+                  'looks really interesting...\n')
             time.sleep(2)
             print('You walk down to the edge of the water... \n')
             time.sleep(2)
             print('You reach down and take a handfull of sand... \n')
             time.sleep(2)
-            print('The moment your skin touches the sand it starts to move....\n')
+            print('The moment your skin touches' +
+                  'the sand it starts to move....\n')
             time.sleep(3)
             print('the sand is actally millions of tiny bugs... \n')
             time.sleep(3)
-            print('You scream in pain as the bugs consume your entire body... \n')
+            print('You scream in pain as the bugs ' +
+                  'consume your entire body... \n')
             time.sleep(3)
-            print('moments later there is just a pile of bones by the water \n')
+            print('moments later there is just' +
+                  'a pile of bones by the water \n')
             time.sleep(3)
             print('What a way to go!')
             time.sleep(3)
@@ -259,24 +269,26 @@ def stay_at_lake():
             break
         elif stay == 'field':
             field()
-        else:
             break
+        else:
             print('Incorrect answer please type stay mountain or field')
             continue
 
 
 def field():
-    """ plays when the payler chooses to go to the field, here you find the dragon can choose 
-    befriend the dragon,  if you have the fish you can win the dragon over, if not the dragon 
-    will eat you"""
+    """ plays when the payler chooses to go to the field, here you find the
+    dragon can choose befriend the dragon,  if you have the fish you can
+    win the dragon over, if not the dragon will eat you"""
 
     print('You set off along the path \n')
     time.sleep(2)
-    print('and find your self in an enormous field full of green and red flowers. \n')
+    print('and find your self in an enormous field' +
+          'full of green and red flowers. \n')
     time.sleep(2)
     print('There seems to be a big hill in the middle of it... \n')
     time.sleep(2)
-    print('You head towards the hill to see if you can see anything from the top \n')
+    print('You head towards the hill to see' +
+          'if you can see anything from the top \n')
     time.sleep(2)
     print('as you get close to the hill you realise it is moving.... \n')
     time.sleep(2)
@@ -287,7 +299,8 @@ def field():
     print('Its a DRAGON......\n')
     time.sleep(2)
     while True:
-        dragon = input('Do you run, or try to befriend the dragon (run/befriend)\n')
+        dragon = input('Do you run, or try to' +
+                       'befriend the dragon (run/befriend)\n')
         if dragon == 'run':
             run_from_dragon()
             break
@@ -300,8 +313,9 @@ def field():
 
 
 def befriend_dragon():
-    """gives the player the opportunity to befriend the dragon.  This will only work if the player
-    has got the fish from the lake, otherwise the dragon will kill them"""
+    """gives the player the opportunity to befriend the dragon.  This will
+    only work if the player has got the fish from the lake, otherwise the
+    dragon will kill them"""
     print()
     print('This dragon looks friendly enough you think to yourself \n')
     time.sleep(2)
@@ -309,9 +323,10 @@ def befriend_dragon():
     time.sleep(2)
     print('You start to walk slowly towards the dragon...\n')
     time.sleep(3)
-    print('But as you step closer the dragon starts to make a low growling sound..... \n')
+    print('But as you step closer the dragon starts' +
+          'to make a low growling sound..... \n')
     time.sleep(3)
-    print("you're starting to wonder if you've made the correct decision..... \n")
+    print("you're starting to wonder if you've made the correct decision...\n")
     time.sleep(2)
     print('What do you do?\n')
     time.sleep(2)
@@ -323,7 +338,8 @@ def befriend_dragon():
     if fish == 'yes':
         print('Give the Dragon the fish from the lake?\n')
     if fish == 'yes':
-        dragon_input = ('Pet the dragon, Run or give the dragon the fish (pet/run/fish)')
+        dragon_input = ('Pet the dragon, Run or give the' +
+                        'dragon the fish (pet/run/fish)')
     else:
         dragon_input = ('Pet the dragon or Run (pet/run)')
     while True:
@@ -331,13 +347,15 @@ def befriend_dragon():
         if dragon_taming == 'fish':
             new_dragon_friend()
         elif dragon_taming == 'pet':
-            print('You tentitively stretch out your and towards the dragons nose \n')
+            print('You tentitively stretch out your hand' +
+                  'towards the dragons nose \n')
             time.sleep(2)
             print('The dragon gives you a sniff.....\n')
             time.sleep(2)
             print('But something is wrong... \n')
             time.sleep(2)
-            print('The dragon likes the smell of you for all the wrong reasons... \n')
+            print('The dragon likes the smell of you' +
+                  'for all the wrong reasons... \n')
             time.sleep(2)
             print('Before you can blink the dragon pounces...')
             time.sleep(2)
@@ -356,7 +374,8 @@ def run_from_dragon():
     """ defining what happens when the player runs from the dragon"""
     print('The dragon is looking at you....\n')
     time.sleep(2)
-    print('You sieze your moment and run as fast as you can away from the dragon.\n')
+    print('You sieze your moment and run' +
+          'as fast as you can away from the dragon.\n')
     time.sleep(2)
     print('The dragon leaps into the air and grabs you with its claws.\n')
     time.sleep(2)
@@ -374,7 +393,7 @@ def run_from_dragon():
 
 
 def new_dragon_friend():
-    """ the player has the dragon on side and next must decide whether to go to the 
+    """ the player has the dragon on side and next must decide whether to go to the
     deamon lair or take a joy ride on the dragon"""
     print('Thank goodness you kept that fish \n')
     time.sleep(2)
@@ -382,7 +401,7 @@ def new_dragon_friend():
     time.sleep(2)
     print('The Dragon really seems to like it ....\n')
     time.sleep(2)
-    print("It makes a happy chirping noise\n") 
+    print("It makes a happy chirping noise\n")
     time.sleep(2)
     print("and pushes you with it's nose \n")
     time.sleep(2)
@@ -392,7 +411,8 @@ def new_dragon_friend():
     time.sleep(2)
     print("Do you take the dragon for a joyride arround the Deamon Realm?\n")
     time.sleep(2)
-    print('or, do you fly directly to the Deamon Kings castle in the mountain?\n')
+    print('or, do you fly directly to the' +
+          'Deamon Kings castle in the mountain?\n')
     time.sleep(2)
     while True:
         fly = input('joyride/castle')
@@ -416,18 +436,18 @@ def new_dragon_friend():
             game_over()
             break
         elif fly == 'castle':
-            deamon_castle_dragon() 
-            break 
+            deamon_castle_dragon()
+            break
         else:
-            print('Incorrect amswer please input joyride or castle')  
+            print('Incorrect amswer please input joyride or castle')
 
 
 def mountain():
-    """Plays when the player picks mountain path.  It gives the option 
+    """Plays when the player picks mountain path.  It gives the option
     to collect an exploding flower"""
     print('You climb the rocky mountain path \n')
     time.sleep(2)
-    print('Growing along the sides are the most ')  
+    print('Growing along the sides are the most ')
     print('beautiful pink flowers\n')
     time.sleep(2)
     print('Do you stop to smell the flowers?\n')
@@ -438,7 +458,7 @@ def mountain():
     time.sleep(2)
     while True:
         global flower
-        flower = input('(smell/pick/ignore)')  
+        flower = input('(smell/pick/ignore)')
         if flower == 'smell':
             print('You stop ans smell the flowers \n')
             time.sleep(2)
@@ -480,7 +500,7 @@ def mountain():
         else:
             print('incorrect answer please enter smell, pick or ignore')
             continue
-    
+
 
 def bear():
     """ player continues up the mountain and has to pass a bear using tools
@@ -532,7 +552,7 @@ def bear():
             print('Both you and the bear explode into a million pieces \n')
             time.sleep(2)
             game_over()
-            break      
+            break
         elif beat_bear == 'fight':
             print('There is no other option \n')
             time.sleep(2)
@@ -580,13 +600,14 @@ def bear():
         else:
             print(f'incorrect answer please input {bear_input}')
             continue
-        
+
 
 def deamon_castle_dragon():
-    """ final stage for the dragon path through the game, the player can choose to fight the deamon or save their sister"""
-    print('You fly on the dragons back \n')   
+    """ final stage for the dragon path through the game, the player can
+    choose to fight the deamon or save their sister"""
+    print('You fly on the dragons back \n')
     time.sleep(2)
-    print('Straight to the Deamon Kings castle \n ')   
+    print('Straight to the Deamon Kings castle \n ')
     time.sleep(2)
     print('through the creepy halls of the castle \n')
     time.sleep(2)
@@ -608,7 +629,7 @@ def deamon_castle_dragon():
     print('You wonder what to do')
     time.sleep(2)
     print('The dragon shifts restlessly next to you \n')
-    time.sleep
+    time.sleep(2)
     print('Do you run towards the Deamon King? \n')
     time.sleep(2)
     print('or do you run towards your sister?')
@@ -643,7 +664,8 @@ def deamon_castle_dragon():
             time.sleep(2)
             print('You launch yourself towards you sister \n')
             time.sleep(2)
-            print('The Deamon King raises his arm to send a fireball  your way\n')
+            print('The Deamon King raises his arm' +
+                  'to send a fireball  your way\n')
             time.sleep(3)
             print('The dragon is startled by the sudden movement \n')
             time.sleep(2)
@@ -686,7 +708,9 @@ def deamon_castle_dragon():
 
 
 def deamon_castle_mountain():
-    """ Final stage for the mountain pathway through the game, if the player still has the flower they will win"""
+    """ Final stage for the mountain pathway through the game, if the player
+    still has the flower they will win. contains while loop and if
+    else statement"""
     print('You make your way into the Deamon Kings Castle \n')
     time.sleep(2)
     print("It's a dark and scary building \n")
@@ -713,7 +737,7 @@ def deamon_castle_mountain():
     time.sleep(2)
     global flower
     global beat_bear
-    if flower == 'pick' and beat_bear == 'fish': 
+    if flower == 'pick' and beat_bear == 'fish':
         print('You remember the flower in your pocket \n')
         time.sleep(2)
         print('Do you throw it at the Deamon? \n')
@@ -728,7 +752,8 @@ def deamon_castle_mountain():
     while True:
         deamon_attack = input(f'Do you {end_game} \n')
         if deamon_attack == 'flower':
-            print('You carefully and discreetly \npull the flower from your pocket \n')
+            print('You carefully and discreetly')
+            print('pull the flower from your pocket \n')
             time.sleep(2)
             print('The deamon has his guard down \n')
             time.sleep(2)
@@ -775,7 +800,8 @@ def deamon_castle_mountain():
             time.sleep(2)
             print("You don't even get close\n")
             time.sleep(2)
-            print('The last thing you hear is his evil cackle as he vapourises you\n')
+            print('The last thing you hear is his evil' +
+                  'cackle as he vapourises you\n')
             time.sleep(2)
             game_over()
             break
