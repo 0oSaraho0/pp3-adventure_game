@@ -40,6 +40,7 @@ def intro():
     time.sleep(2)
     print('Your parents have gone out for the evening leaving you in charge.')
     print()
+    
     time.sleep(2)
     print('Your baby sister is sleeping upstairs in her bedroom. \n')
     time.sleep(2)
@@ -568,7 +569,7 @@ def bear():
             time.sleep(2)
             print('Both you and the bear explode into a million pieces \n')
             time.sleep(2)
-            game_over()
+            game_over() 
             break
         elif beat_bear == 'fight':
             print('There is no other option \n')
@@ -751,24 +752,24 @@ def deamon_castle_mountain():
     time.sleep(3)
     print('You have no idea how to beat him \n')
     time.sleep(2)
+    print('Do you try and fight him? \n')
+    time.sleep(2)
+    print('Do you try and grab your sister and leg it? \n')
+    time.sleep(2)
     global flower
     global beat_bear
     global fish
     if flower == 'pick' and beat_bear == 'fish':
-        print('You remember the flower in your pocket \n')
+        print('Then you You remember the flower in your pocket \n')
         time.sleep(2)
         print('Do you throw it at the Deamon? \n')
         time.sleep(2)
         end_game = ('(flower/fight/run)')
-    if fish == 'yes' and beat_bear == 'flower':
+    elif fish == 'yes' and beat_bear == 'flower':
         print("All you've got is a fish")
         print('what on earth can you do with a fish?')
         end_game = ('(fish/fight/run)')
     else:
-        print('Do you try and fight him? \n')
-        time.sleep(2)
-        print('Do you try and grab your sister and leg it? \n')
-        time.sleep(2)
         end_game = ('(fight/run)')
     while True:
         deamon_attack = input(f'Do you {end_game} \n')

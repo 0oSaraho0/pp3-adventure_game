@@ -107,7 +107,7 @@ The paths are as follows
 
       ![mountain no fish no flowers](images/mountain-no-fish-no-flowers.png)
 
-      -keep fish - yes - go to mountain - ignore flower - see bear - rum/fight/fish (correctly doesn't offer flower) 
+      -keep fish - yes - go to mountain - ignore flower - see bear - run/fight/fish (correctly doesn't offer flower) 
 
     - field
       - see dragon - befriend dragon - run from dragon - game over - no errors
