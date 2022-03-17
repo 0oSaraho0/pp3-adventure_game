@@ -103,11 +103,16 @@ The paths are as follows
       - keep fish - yes - go to field - see dragon - befriend dragon - run/pet/fish (correctly gives fish option) - joyride - game over - No Errrs
       - keep fish - yes - go to field - see dragon - befriend dragon - run/pet/fish (correctly gives fish option) - castle - run at deamon - Game Over - No Errors
       - keep fish - yes - go to field - see dragon - befriend dragon - run/pet/fish (correctly gives fish option) - castle - run to sister - Winner - No Errors
-           
+      - keep fish - no - go to mountain - ignore flower - see bear - run/fight(correctly doesn't offer fish or flower options)- both run and fight go to game over - no errors
+
+      ![mountain no fish no flowers](images/mountain-no-fish-no-flowers.png)
+
+      -keep fish - yes - go to mountain - ignore flower - see bear - rum/fight/fish (correctly doesn't offer flower) 
 
     - field
       - see dragon - befriend dragon - run from dragon - game over - no errors
       - see dragon- befriend dragon - pet dragon - game over - no errors
+    -
 
        
            
