@@ -753,12 +753,17 @@ def deamon_castle_mountain():
     time.sleep(2)
     global flower
     global beat_bear
+    global fish
     if flower == 'pick' and beat_bear == 'fish':
         print('You remember the flower in your pocket \n')
         time.sleep(2)
         print('Do you throw it at the Deamon? \n')
         time.sleep(2)
         end_game = ('(flower/fight/run)')
+    if fish == 'yes' and beat_bear == 'flower':
+        print("All you've got is a fish")
+        print('what on earth can you do with a fish?')
+        end_game = ('(fish/fight/run)')
     else:
         print('Do you try and fight him? \n')
         time.sleep(2)
@@ -787,25 +792,7 @@ def deamon_castle_mountain():
             time.sleep(3)
             print(' when you open you eyes \n')
             time.sleep(2)
-            print('You are on your sofa in your living room \n')
-            time.sleep(2)
-            print('You race upstairs to your sisters bedroom')
-            time.sleep(2)
-            print('She is safely in her cot')
-            time.sleep(2)
-            print('you breath a hugh sigh if relief')
-            time.sleep(2)
-            print('It must have been an awful nightmare.. \n')
-            time.sleep(2)
-            print('you sink to your knees\n')
-            time.sleep(2)
-            print('and notice the glowing orb is still there\n')
-            time.sleep(2)
-            print('you decide not to touch it this time\n')
-            time.sleep(2)
-            print("You've had quite enough adventure for one day\n")
-            time.sleep(2)
-            winner()
+            home_from_mountain()
             break
         elif deamon_attack == 'fight':
             print("You can't quite believe you got here completely unarmed \n")
@@ -832,9 +819,63 @@ def deamon_castle_mountain():
             time.sleep(3)
             game_over()
             break
+        elif deamon_attack == 'fish':
+            print('"ok" you say to yourelf\n')
+            time.sleep(2)
+            print('"Think bold with that fish" ')
+            time.sleep(2)
+            print('You walk straight up to that Deamon ...')
+            time.sleep(3)
+            print('and fish slap him round the face!')
+            time.sleep(3)
+            print('he looks at you in shock and horror')
+            time.sleep(2)
+            print("you can't believe it")
+            time.sleep(2)
+            print('his face is starting to melt...')
+            time.sleep(2)
+            print("He's allergic to fish")
+            time.sleep(2)
+            print('What a stroke of luck!')
+            time.sleep(2)
+            print('You run and grab your sister')
+            time.sleep(2)
+            print('The Deamon King dropps to the floor')
+            time.sleep(2)
+            print('As you run for the exit')
+            print('The world arround you melts away')
+            time.sleep(2)
+            print('The next thing you know')
+            home_from_mountain()
         else:
             print(f'Incorrect answer please type {end_game}')
             continue
+
+
+def home_from_mountain():
+    """ prints statents describe end of game for winning the mountain section
+    of the game.  links to the winner function.  I put this in because there
+    are two winning optinos in the mountain section and it saves code being
+    repeated twice"""
+    print('You are on your sofa in your living room \n')
+    time.sleep(2)
+    print('You race upstairs to your sisters bedroom \n')
+    time.sleep(2)
+    print('She is safely in her cot')
+    time.sleep(2)
+    print('you breath a hugh sigh if relief')
+    time.sleep(2)
+    print('It must have been an awful nightmare.. \n')
+    time.sleep(2)
+    print('you sink to your knees\n')
+    time.sleep(2)
+    print('and notice the glowing orb is still there\n')
+    time.sleep(2)
+    print('you decide not to touch it this time\n')
+    time.sleep(2)
+    print("You've had quite enough adventure for one day\n")
+    time.sleep(2)
+    winner()
 
 
 def game_over():
