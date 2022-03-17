@@ -132,7 +132,9 @@ def deamon_realm():
     print('You are either very brave or very stupid! \n')
     print('Good luck in the Deamon Realm! \nYou will need it! \n')
     time.sleep(3)
-    print('There are 3 doors. \n')
+    print('You look back arround the room\n')
+    time.sleep(2)
+    print('There are 3 doors.')
     print('To your left, the door leads to a lake. \n')
     time.sleep(2)
     print('To your right, the door leads to a field \n')
@@ -142,7 +144,7 @@ def deamon_realm():
     print('and the Deamon Kings Castle. \n')
     time.sleep(2)
     while True:
-        doors = input('Which way will go you? (left/right/front) \n')
+        doors = input('Which way will go you?  (left/right/front) \n')
         if doors == 'left':
             lake()
             break
@@ -176,7 +178,7 @@ def lake():
     print('It seems a little strange but ... \n')
     time.sleep(2)
     while True:
-        fishing = input('would you like to go fishing? (yes/no) \n ')
+        fishing = input('would you like to go fishing?  (yes/no) \n ')
         if fishing == 'yes':
             lets_fish()
             break
@@ -188,7 +190,7 @@ def lake():
             stay_at_lake()
             break
         else:
-            print('Incorrect answer type yes or no')
+            print('Incorrect answer please type (yes or no)')
             continue
 
 
@@ -212,7 +214,7 @@ def lets_fish():
     print('You have actcually caught a fish!....\n')
     while True:
         global fish
-        fish = input('Would you like to keep the fish (yes/no) \n')
+        fish = input('Would you like to keep the fish?  (yes/no) \n')
         if fish == 'yes':
             time.sleep(2)
             print('this fish might come in handy for something. \n')
@@ -233,7 +235,7 @@ def lets_fish():
             stay_at_lake()
             break
         else:
-            print('Incorrect answer type (yes or no).')
+            print('Incorrect answer please type (yes or no).')
             continue
 
 
@@ -308,7 +310,7 @@ def field():
     time.sleep(2)
     while True:
         dragon = input('Do you run, or try to' +
-                       'befriend the dragon (run/befriend)\n')
+                       'befriend the dragon?  (run/befriend)\n')
         if dragon == 'run':
             run_from_dragon()
             break
@@ -316,7 +318,7 @@ def field():
             befriend_dragon()
             break
         else:
-            print('Incorrect answer please type run or befriend')
+            print('Incorrect answer please type (run or befriend)')
             continue
 
 
@@ -428,7 +430,7 @@ def new_dragon_friend():
           'Deamon Kings castle in the mountain?\n')
     time.sleep(2)
     while True:
-        fly = input('joyride/castle')
+        fly = input('(joyride/castle)')
         if fly == 'joyride':
             print('You climb onto the Dragons back\n')
             time.sleep(2)
@@ -549,15 +551,15 @@ def bear():
         print('Do you throw the flower at it \n')
         time.sleep(2)
     if fish == 'yes' and flower == 'pick':
-        bear_input = ('run/fight/flower/fish')
+        bear_input = ('(run/fight/flower/fish)')
     if fish == 'yes' and flower == 'ignore':
-        bear_input = ('run/fight/fish')
+        bear_input = ('(run/fight/fish)')
     if fish == 'no' and flower == 'pick':
-        bear_input = ('run/fight/flower')
+        bear_input = ('(run/fight/flower)')
     if fish == 'no' and flower == 'ignore':
-        bear_input = ('run/fight')
+        bear_input = ('(run/fight)')
     while True:
-        beat_bear = input(f'Do you {bear_input} \n')
+        beat_bear = input(f'Do you {bear_input}?\n')
         if beat_bear == 'run':
             time.sleep(2)
             print('You try to run but you trip and fall \n')
@@ -717,7 +719,7 @@ def deamon_castle_dragon():
             winner()
             play_again()
         else:
-            print('Incorrect answer, pleaser input sister or deamon')
+            print('Incorrect answer, pleaser input (sister) or deamon)')
             continue
 
 
