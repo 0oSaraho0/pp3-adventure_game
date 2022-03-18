@@ -3,6 +3,8 @@
 
 ![gif](images/gif0of-game.gif)
 
+-----
+
 [Deamon Quest Live Site](https://pp3-adventure-game.herokuapp.com/)
 
 
@@ -129,23 +131,23 @@ I have played through every function and every option to ensure there are no err
 They are as follows
 
 open_image
-- Enter name - correctly takes name and ask again for an input if nothing is entered.
+- Enter name - correctly takes a name and ask again for an input if nothing is entered.
 
 intro
 - correctly connects to start_game
 
 start_game
-- Asks player to touch orb
-  - 'yes' correctly connects to demon-realm
+- Asks player to touch the orb
+  - 'yes' correctly connects to demon_realm
   - 'no' correctly connects to game_over
-  - any other answer corectly receives 'Incorrect answer please type yes or no' message
+  - any other answer correctly receives 'Incorrect answer please type yes or no' message
 
 deamon_realm
 - Has 3 doors to choose from left, right and front.
   - 'left' correctly connects to lake
   - 'right' correctly connects to field
   - 'front' correctly connects to mountain
-  - any other input receives 'incorrect answer you must enter left right or front' message
+  - any other input receives 'incorrect answer you must enter left, right or front' message
 
 lake
  - Has an option to catch a fish.
@@ -154,13 +156,13 @@ lake
   - any other input receives 'Incorrect answer please type (yes or no)' message
 
 lets_fish
- - Player catches a fish and has the option to keep the fish. fish is now a global variable and can be used in other functins within the game
+ - Player catches a fish and has the option to keep the fish. 
   - 'yes' correctly connects to stay_at_lake
   - 'no' correctly connects to stay_at_lake
-  - any other answer receives'Incorrect answer please type (yes or no)' message
+  - any other answer receives 'Incorrect answer please type (yes or no)' message
 
 stay_at_lake
-- Asks player to if they want to stay or move on with the game.
+- Asks player if they want to stay or move on with the game.
  - 'stay' correctly connects to game_over
  - 'mountain' correctly connects to mountain
  - 'field' correctly connects to field
@@ -173,18 +175,19 @@ field
  - any other input receives 'Incorrect answer please type (run or befriend)' message
 
 befriend_dragon
-- Player has the option to run from dragon or pet the dragon.  If they have been to the lake they will also have the option to give the fish to the dragon.
+- Player has the option to run from the dragon or pet the dragon.  If they have been to the lake they will also have the option to give the fish to the dragon.
  - 'run' correctly connects to run_from_dragon
  - 'pet' correctly connects to game_over
  - 'fish' correctly only appears if you have been to the lake to collect it.  If not only the first to options are given. It correctly connects to new_dragon_friend.
- - If any other input is put in or if fish is entered when it has not been asked for the player receives ( f'Incorrect answer you must input: {dragon_input}'.) message.
- dragon_input correctly states 'Pet the dragon, Run or give the dragon the fish (pet/run/fish)' If the payer has the fish or 'Pet the dragon or Run (pet/run)' If they do not.
+ - If any other input is put in or if fish is entered when it has not been asked for the player receives 'Incorrect answer you must input: {dragon_input}'. message.
+ dragon_input correctly states 'Pet the dragon, Run or give the dragon the fish (pet/run/fish)' If the payer has the fish 
+or 'Pet the dragon or Run (pet/run)' If they do not.
 
 run_from_dragon
-- player runs from dragon and dies.  This correctly connects to game_over
+- player runs from the dragon and dies.  This correctly connects to game_over
 
 new_dragon_friend
-- player has befriended the dragon and can choose to joyride or go to the castle.
+- the player has befriended the dragon and can choose to joyride or go to the castle.
  - 'joyride' correctly connects to game_over
  - 'castle' correctly connects to deamon_castle_dragon
  - Any other input receives 'Incorrect answer please input joyride or castle' message
@@ -196,33 +199,33 @@ deamon_castle_dragon
  - any other input receives 'Incorrect answer, please input (sister or demon)'message
 
 mountain
-- Player takes the mountain path and encounters some flowers which they can pick smell or ignore.
+- Player takes the mountain path and encounters some flowers that they can pick smell or ignore.
  - 'pick' correctly connects to bear.
  - 'smell' correctly connects to game_over
  - 'ignore' correctly connects to bear
 
 bear
-- The player comes accross a bear.  If they have kept the fish and picked the flower they can either fight run flower or fish the bear.
- - 'fight and run' both correctly connect to game_over.#
+- The player comes across a bear.  If they have kept the fish and picked the flower they can either fight, run, flower, or fish the bear.
+ - 'fight and run' both correctly connect to game_over.
  - 'fish correctly only appears if the player has been to the lake and kept the fish.  It also correctly connects to demon_castle_mountain.
  ![mountain bear fish no flowers](images/run-fight-fish.png)
  - 'flower' correctly only appears if the player has picked the flower. It also correctly connects to demon_castle_mountain
  - Any other input including one fish or flower when the player has not collected them will return :
- f'Do you {bear_input}?\n')
+ Do you {bear_input}
    - bear_input will state (run/fight/flower/fish) if the player has both the flower and the fish.
    - (run/fight/fish) if they only have the fish.
    - (run/fight) if they have neither.
    ![mountain no fish no flowers](images/mountain-no-fish-no-flowers.png)
 
-It was at this point in testing that I realised that the player could get to the deamon castle with a fish and I had not written an outcome for that possibility.  Without the thorough testing I would not have realied this.
+It was at this point in testing that I realised that the player could get to the demon castle with a fish and I had not written an outcome for that possibility.  Without thorough testing, I would not have realised this.
 I have now written an extra winning ending that contains the fish.
 
 demon_castle_mountain
-- The player meets the Demon King and can defete him with either the fish or the flower if they have it.  Or they can run or fight.
+- The player meets the Demon King and can defeat him with either the fish or the flower if they have it.  Or they can run or fight.
  - 'flower' correctly only appears if the player has picked the flower and not used it on the bear. It correctly connects to winner.
       ![flower fight run](images/flower-fight-run.png) 
  - 'fish' correctly only appears if the player has kept the fish and not used it on the bear. It correctly connects to winner
-       ![deamon run fight fish](images/deamon-fish-fight-run.png).
+       ![demon run fight fish](images/demon-fish-fight-run.png).
  - 'run and fight' both correctly connect to game_over.
  - Further testing after I had added the fish update showed that the run/fight/flower option was no longer working.  It was possible to enter fish here and continue with the game.  I have written about this bug in the bugs section above. Once again I wouldn't have found this bug without thorough testing.  Now that it is fixed the incorrect input message is as follows.
    - Incorrect answer please type {end_game}
@@ -244,13 +247,13 @@ home_from_mountain
 - correctly connects to play_again
 
 play_again
-- asks player if they wish to play again.
+- asks the player if they wish to play again.
  - 'yes' correctly connects to open_image
  - 'no' correctly prints Thank you for playing and correctly exits.
- - Any other input receives 'Incorrect answer please type yes or no'message
+ - Any other input receives 'Incorrect answer please type yes or no' message
 
 
-Finally I tested my code in the http://pep8online.com/checkresult 
+Finally, I tested my code in the http://pep8online.com/checkresult 
 This showed no errors
 
 ![pp8 check](images/pip8.png)
@@ -269,10 +272,11 @@ As always my amazing mentor Daisy McGirr and the slack community.
   
 # Technonogies Used
 
-http://pep8online.com/
-https://www.lucidchart.com/
-https://id.heroku.com/
-https://www.descript.com/
+- http://pep8online.com/
+- https://www.lucidchart.com/
+- https://id.heroku.com/
+- https://www.descript.com/
+- http://ecotrust-canada.github.io/markdown-toc/
 
 # Deployment
 
@@ -280,18 +284,25 @@ Deployment through Heroku
 
 1. Go to Heroko.com and sign in.
 2. Click New - Create new app
+
 ![new app](images/heroku-1.png)
+
 3. Pick a name for your app.  Heroku remembers all app names.  You will see in the picture that this one is very slightly different from my one because I made this walkthrough after I deployed the original project.
 ![app name](images/heroku-2.png)
 4. Go to settings (Circled in blue)
 ![menu](images/heroku-menu.png)
+
 5. Input config vars.  PORT 8000 
 ![config](images/heroku-3.png)
+
 6. Input Buildpacks.  It is important that heroku/python is above heroku/nodejs.  You can click and drag them to the correct position if they are input the wrong way round.
+
 ![buildpack](images/heroku-4.png)
 7. Go to deployment in the menu (circled in red)
+
 ![menu](images/heroku-menu.png)
-8. You can enable automatic deployment.  This will automaticall deploy updates when you push your code to github.
+8. You can enable automatic deployment.  This will automatically deploy updates when you push your code to github.
 9. Then click Display Branch and a new web page will open with your deployed site.
 ![deploy](images/heroku-5.png)
+
 ![webpage](images/heroku-6.png)
