@@ -95,7 +95,7 @@ def start_game():
             print('Just leave your sister to her fate \n')
             time.sleep(2)
             print('Go and have a cup of tea and forget all about it! \n')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif touch_orb == 'yes':
@@ -272,7 +272,7 @@ def stay_at_lake():
                   'a pile of bones by the water \n')
             time.sleep(3)
             print('What a way to go!')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif stay == 'mountain':
@@ -374,7 +374,7 @@ def befriend_dragon():
             print('Before you can blink the dragon pounces...\n')
             time.sleep(2)
             print('AND SWALLOWS YOU WHOLE!!!')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif dragon_taming == 'run':
@@ -403,7 +403,7 @@ def run_from_dragon():
     print('Waiting in the nest are four hungry baby dragons.....\n')
     time.sleep(2)
     print('who devour you instantly\n')
-    time.sleep(4)
+    time.sleep(6)
     game_over()
 
 
@@ -449,7 +449,7 @@ def new_dragon_friend():
             print('The water is freezing and you are unable to swim\n')
             time.sleep(2)
             print('You sink to the bottom and drown\n')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif fly == 'castle':
@@ -499,7 +499,7 @@ def mountain():
             print('You sneeze.....\n')
             time.sleep(3)
             print('Your head EXPLODES! \n')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif flower == 'pick':
@@ -570,7 +570,7 @@ def bear():
             print('Into a patch of those pink flowers \n')
             time.sleep(3)
             print('Both you and the bear explode into a million pieces \n')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif beat_bear == 'fight':
@@ -585,7 +585,7 @@ def bear():
             print("It's a friggin BEAR!!! \n")
             time.sleep(2)
             print('It rips you limb from limb \n')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif beat_bear == 'fish' and fish == 'yes':
@@ -673,7 +673,7 @@ def demon_castle_dragon():
             print('Which unfortunately hits you both')
             time.sleep(2)
             print('You were so close.....')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif defeat == 'sister':
@@ -718,7 +718,7 @@ def demon_castle_dragon():
             print('and see the DRAGON sitting in your paddling pool......\n')
             time.sleep(3)
             print('But that is an adventure for another day!')
-            time.sleep(4)
+            time.sleep(6)
             winner()
             play_again()
         else:
@@ -811,7 +811,7 @@ def demon_castle_mountain():
             time.sleep(2)
             print('The last thing you hear is his evil' +
                   'cackle as he vapourises you\n')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif demon_attack == 'run':
@@ -822,7 +822,7 @@ def demon_castle_mountain():
             print('He sends a fireball at you\n')
             time.sleep(2)
             print('You were so close...')
-            time.sleep(4)
+            time.sleep(6)
             game_over()
             break
         elif demon_attack == 'fish' and choice == 2:
@@ -880,7 +880,7 @@ def home_from_mountain():
     print('You decide not to touch it this time\n')
     time.sleep(2)
     print("You've had quite enough adventure for one day\n")
-    time.sleep(4)
+    time.sleep(6)
     winner()
 
 

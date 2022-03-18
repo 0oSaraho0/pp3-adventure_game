@@ -133,11 +133,9 @@ The whole feel of the text game promotes that feeling of nostalgia of playing th
 
 -------
 
-
-
 # Features left to implement
 
-I'm pretty happy with the features this game has at the moment.  The game could be expanded with further branches to go and explore.  For instance, when riding the dragon, instead of dying at that point it could take you on another bit of adventure needed for the game instead.
+I'm pretty happy with the features this game has at the moment.  The game could be expanded with further branches to go and explore.  For instance, when riding the dragon, instead of dying at that point it could take you on another bit of adventure needed for the game instead. I also left the game endings open for further adventures.  These could be expanded.
 
 # Bugs
 
@@ -230,13 +228,16 @@ bear
 - The player comes across a bear.  If they have kept the fish and picked the flower they can either fight, run, flower, or fish the bear.
   - 'fight and run' both correctly connect to game_over.
   - 'fish correctly only appears if the player has been to the lake and kept the fish.  It also correctly connects to demon_castle_mountain.
+
  ![mountain bear fish no flowers](images/run-fight-fish.png)
+
   - 'flower' correctly only appears if the player has picked the flower. It also correctly connects to demon_castle_mountain
   - Any other input including one fish or flower when the player has not collected them will return :
  Do you {bear_input}
    - bear_input will state (run/fight/flower/fish) if the player has both the flower and the fish.
    - (run/fight/fish) if they only have the fish.
    - (run/fight) if they have neither.
+
    ![mountain no fish no flowers](images/mountain-no-fish-no-flowers.png)
 
 It was at this point in testing that I realised that the player could get to the demon castle with a fish and I had not written an outcome for that possibility.  Without thorough testing, I would not have realised this.
@@ -245,9 +246,12 @@ I have now written an extra winning ending that contains the fish.
 demon_castle_mountain
 - The player meets the Demon King and can defeat him with either the fish or the flower if they have it.  Or they can run or fight.
  - 'flower' correctly only appears if the player has picked the flower and not used it on the bear. It correctly connects to winner.
-      ![flower fight run](images/flower-fight-run.png) 
+
+![flower fight run](images/flower-fight-run.png) 
  - 'fish' correctly only appears if the player has kept the fish and not used it on the bear. It correctly connects to winner
-       ![demon run fight fish](images/demon-fish-fight-run.png).
+
+![demon run fight fish](images/demon-fish-fight-run.png).
+
  - 'run and fight' both correctly connect to game_over.
  - Further testing after I had added the fish update showed that the run/fight/flower option was no longer working.  It was possible to enter fish here and continue with the game.  I have written about this bug in the bugs section above. Once again I wouldn't have found this bug without thorough testing.  Now that it is fixed the incorrect input message is as follows.
    - Incorrect answer please type {end_game}
