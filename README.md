@@ -5,7 +5,7 @@
 
 -----
 
-[Deamon Quest Live Site](https://pp3-adventure-game.herokuapp.com/)
+[Demon Quest Live Site](https://pp3-adventure-game.herokuapp.com/)
 
 
 # Table of Contents
@@ -44,7 +44,7 @@ This is an interactive game, based on old text adventure games such as Colossal 
 
 ## Initial Concept
 
-The player of this game navigates their way through the Deamon Realm to find their sister who has been taken by the Deamon King.  They must collect objects and pass different stages of the game to reach the Deamon King's castle and save their sister.
+The player of this game navigates their way through the Demon Realm to find their sister who has been taken by the Demon King.  They must collect objects and pass different stages of the game to reach the Demon King's castle and save their sister.
 
 This game is aimed at anyone who can read that likes to play fun games.  There are some interesting ways to die in the game so parental guidance may be required for younger children.  This may be more fun for adults to play who can remember playing text-based games as a child.
 
@@ -101,7 +101,7 @@ The whole feel of the text game promotes that feeling of nostalgia of playing th
 
 - The player starts the game by entering their name, the game then welcomes them to the game and starts the game intro.
 
-- The story starts with the player babysitting their baby sister on a Saturday evening when they hear a strange noise from upstairs.  When they get there a Deamon King is taking their sister away.
+- The story starts with the player babysitting their baby sister on a Saturday evening when they hear a strange noise from upstairs.  When they get there a Demon King is taking their sister away.
 
 - The first question is whether or not to touch an orb.  If they say yes they will continue with the game.  If they answer no they will sarcastically be told how brave they are and the game will be over.
 
@@ -113,13 +113,13 @@ The whole feel of the text game promotes that feeling of nostalgia of playing th
 
 - If the player manages to befriend the dragon then they have the choice to joyride around the realm or go straight to the castle.  If they choose to joyride they will endure an Icarus style death where the dragon flys too close to the sun and then too close to the sea and they drown and the game is over.
 
-- If the player goes to the castle they meet the Deamon King and can choose to fight him or save their sister.  The correct answer is to run to their sister.  If they fight the Deamon King the dragon ends up burning them both to death and the game is over.
+- If the player goes to the castle they meet the Demon King and can choose to fight him or save their sister.  The correct answer is to run to their sister.  If they fight the Demon King the dragon ends up burning them both to death and the game is over.
 
 - If the player chooses to go up the mountain they will first encounter some beautiful flowers.  They are given the choice to pick, smell or ignore them.  If they smell them they will get a nose full of explosive pollen which causes them to sneeze, which in turn causes their head to explode. Game over
 
 - The player next encounters a bear.  If they have picked up the fish from the lake and the flower from the previous stage they will have the choice to either run or fight the bear, throw the fish or the flower at it.  If they fight the bear it will kill them and the game will be over. If they run they will fall into a patch of flowers and they will explode.
 
-- If the player uses either the fish or the flower on the bear they will move onto the castle to meet the Demon King. Here they will be asked if they want to fight or run and possibly either the fish or the flower depending on what they have with them. If the player has the flower they can throw it at the Deamon causing him to explode.  If they have the fish they can slap him around the face with it causing an allergic reaction and death.  Both of these will win the game.
+- If the player uses either the fish or the flower on the bear they will move onto the castle to meet the Demon King. Here they will be asked if they want to fight or run and possibly either the fish or the flower depending on what they have with them. If the player has the flower they can throw it at the Demon causing him to explode.  If they have the fish they can slap him around the face with it causing an allergic reaction and death.  Both of these will win the game.
 
 - The game ending ends up back in the player's home with them waking up on the sofa.  If they won via the mountain path they will check on their sister thinking it is a dream but find the orb still under her bed.
 
@@ -143,9 +143,9 @@ I'm pretty happy with the features this game has at the moment.  The game could 
 
 There was a bug that showed up some of the game questions at the end of the game after the player inputs that they do not wish to play again.  I fixed this bug by adding an exit function to the end of the loop in the play_again function.
 
-After adding the last option to beat the Deamon King with a fish in the deamon_castle_mountain function the flower option stopped working.  After some consultation on slack, we worked out that this bug was caused because I used two if statements rather than an if elif statement. This bug was easily fixed by altering that statement.
+After adding the last option to beat the Demon King with a fish in the demon_castle_mountain function the flower option stopped working.  After some consultation on slack, we worked out that this bug was caused because I used two if statements rather than an if elif statement. This bug was easily fixed by altering that statement.
 
-There is a bug that plays out if the player types fish in the flower/run/fight option in deamon_castle_mountain.  If the player incorrectly inputs fish, the game continues with the fish print statements.  I fixed this bug by adding an extra choice variable to the flower and fish options.  choice = 1 for flower and choice = 2 for fish.  This added the extra variable to each option so that entering a variable from the other option would cause an incorrect answer.
+There is a bug that plays out if the player types fish in the flower/run/fight option in demon_castle_mountain.  If the player incorrectly inputs fish, the game continues with the fish print statements.  I fixed this bug by adding an extra choice variable to the flower and fish options.  choice = 1 for flower and choice = 2 for fish.  This added the extra variable to each option so that entering a variable from the other option would cause an incorrect answer.
 
 # Testing
 
@@ -164,7 +164,7 @@ start_game
   - 'no' correctly connects to game_over
   - any other answer correctly receives 'Incorrect answer please type yes or no' message
 
-deamon_realm
+demon_realm
 - Has 3 doors to choose from left, right and front.
   - 'left' correctly connects to lake
   - 'right' correctly connects to field
@@ -211,10 +211,10 @@ run_from_dragon
 new_dragon_friend
 - the player has befriended the dragon and can choose to joyride or go to the castle.
   - 'joyride' correctly connects to game_over
-  - 'castle' correctly connects to deamon_castle_dragon
+  - 'castle' correctly connects to demon_castle_dragon
   - Any other input receives 'Incorrect answer please input joyride or castle' message
 
-deamon_castle_dragon
+demon_castle_dragon
 - The player meets the Demon King and either run towards the Demon or their sister
   - 'demon' correctly connects to game_over
   - 'sister' correctly connects to winner

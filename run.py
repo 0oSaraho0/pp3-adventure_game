@@ -353,7 +353,7 @@ def befriend_dragon():
         print('Give the Dragon the fish from the lake?\n')
     if fish == 'yes':
         dragon_input = ('Pet the dragon, Run or give the' +
-                        'dragon the fish (pet/run/fish)')
+                        ' dragon the fish (pet/run/fish)')
     else:
         dragon_input = ('Pet the dragon or Run (pet/run)')
     while True:
@@ -503,7 +503,7 @@ def mountain():
             game_over()
             break
         elif flower == 'pick':
-            print('These flowers make come in handy later \n')
+            print('These flowers may come in handy later \n')
             time.sleep(2)
             print('You carefully wrap one up and put it in your pocket \n')
             time.sleep(2)
@@ -530,7 +530,7 @@ def bear():
     print('You continue up the mountain path \n')
     time.sleep(2)
     print('It is getting steap')
-    print('and deanse with undergrowth \n')
+    print('and dense with undergrowth \n')
     time.sleep(2)
     print('You hear movement up ahead \n')
     time.sleep(2)
@@ -611,7 +611,7 @@ def bear():
             time.sleep(2)
             print('It explodes killing the bear instantly. \n')
             time.sleep(2)
-            print('You breath a sigh of relief')
+            print('You breathee a sigh of relief')
             print('and continue up the mountain\n')
             time.sleep(2)
             demon_castle_mountain()
@@ -691,7 +691,7 @@ def demon_castle_dragon():
             print('You grab your sister ....\n')
             time.sleep(2)
             print('You turn just in time')
-            print('to see the dragon breath a streem of fire\n')
+            print('to see the dragon breathe a streem of fire\n')
             time.sleep(2)
             print('It hits the Demon King!... \n')
             time.sleep(2)
@@ -707,7 +707,7 @@ def demon_castle_dragon():
             time.sleep(2)
             print('She is safely in her cot')
             time.sleep(2)
-            print('You breath a hugh sigh if relief')
+            print('You breathe a huge sigh if relief')
             time.sleep(2)
             print('It must have been an awful nightmare..')
             time.sleep(2)
@@ -869,7 +869,7 @@ def home_from_mountain():
     time.sleep(2)
     print('She is safely in her cot\n')
     time.sleep(2)
-    print('You breath a hugh sigh of relief\n')
+    print('You breathe a huge sigh of relief\n')
     time.sleep(2)
     print('It must have been an awful nightmare.. \n')
     time.sleep(2)
