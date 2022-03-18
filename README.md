@@ -9,6 +9,28 @@
 
 
 # Table of Contents
+- [DEMON QUEST - TEXT ADVENTURE GAME](#demon-quest---text-adventure-game)
+- [Table of Contents](#table-of-contents)
+- [Objective](#objective)
+- [About](#about)
+- [User Experience (UX)](#user-experience--ux-)
+  * [Initial Concept](#initial-concept)
+  * [Site Goals](#site-goals)
+  * [User Goals](#user-goals)
+- [Logic](#logic)
+- [Features](#features)
+  * [Game Play](#game-play)
+- [Features left to implement](#features-left-to-implement)
+- [Bugs](#bugs)
+- [Testing](#testing)
+- [References and Acknowledgements](#references-and-acknowledgements)
+  * [Websites used for reference](#websites-used-for-reference)
+  * [Acknowledgments](#acknowledgments)
+- [Technonogies Used](#technonogies-used)
+- [Deployment](#deployment)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Objective
 
@@ -63,7 +85,7 @@ This slowed down the text appearing at 2 or 3 second intervals allowing the user
 
 ![game title](images/game-title.png)
 
-- I also used a loop for the winner and loser functions so the letters would appear individually at the end of the game.  This made a more appealing game ending than just the writing on the page.
+- I also used the os import a loop for the winner and loser functions so the letters would appear individually at the end of the game.  This made a more appealing game ending than just the writing on the page.
 
 ![game over](images/game-over.png)
 
@@ -163,23 +185,23 @@ lets_fish
 
 stay_at_lake
 - Asks player if they want to stay or move on with the game.
- - 'stay' correctly connects to game_over
- - 'mountain' correctly connects to mountain
- - 'field' correctly connects to field
- - any other input receives 'Incorrect answer please type stay mountain or field' message.
+  - 'stay' correctly connects to game_over
+  - 'mountain' correctly connects to mountain
+  - 'field' correctly connects to field
+  - any other input receives 'Incorrect answer please type stay mountain or field' message.
 
 field
 - Player enters a field and finds a dragon. They can run or befriend the dragon.
- - 'run' correctly connects to run_from_dragon
- - 'befriend' correctly connects to befriend_dragon
- - any other input receives 'Incorrect answer please type (run or befriend)' message
+  - 'run' correctly connects to run_from_dragon
+  - 'befriend' correctly connects to befriend_dragon
+  - any other input receives 'Incorrect answer please type (run or befriend)' message
 
 befriend_dragon
 - Player has the option to run from the dragon or pet the dragon.  If they have been to the lake they will also have the option to give the fish to the dragon.
- - 'run' correctly connects to run_from_dragon
- - 'pet' correctly connects to game_over
- - 'fish' correctly only appears if you have been to the lake to collect it.  If not only the first to options are given. It correctly connects to new_dragon_friend.
- - If any other input is put in or if fish is entered when it has not been asked for the player receives 'Incorrect answer you must input: {dragon_input}'. message.
+  - 'run' correctly connects to run_from_dragon
+  - 'pet' correctly connects to game_over
+  - 'fish' correctly only appears if you have been to the lake to collect it.  If not only the first to options are given. It correctly connects to new_dragon_friend.
+  - If any other input is put in or if fish is entered when it has not been asked for the player receives 'Incorrect answer you must input: {dragon_input}'. message.
  dragon_input correctly states 'Pet the dragon, Run or give the dragon the fish (pet/run/fish)' If the payer has the fish 
 or 'Pet the dragon or Run (pet/run)' If they do not.
 
@@ -188,29 +210,29 @@ run_from_dragon
 
 new_dragon_friend
 - the player has befriended the dragon and can choose to joyride or go to the castle.
- - 'joyride' correctly connects to game_over
- - 'castle' correctly connects to deamon_castle_dragon
- - Any other input receives 'Incorrect answer please input joyride or castle' message
+  - 'joyride' correctly connects to game_over
+  - 'castle' correctly connects to deamon_castle_dragon
+  - Any other input receives 'Incorrect answer please input joyride or castle' message
 
 deamon_castle_dragon
 - The player meets the Demon King and either run towards the Demon or their sister
- - 'demon' correctly connects to game_over
- - 'sister' correctly connects to winner
- - any other input receives 'Incorrect answer, please input (sister or demon)'message
+  - 'demon' correctly connects to game_over
+  - 'sister' correctly connects to winner
+  - any other input receives 'Incorrect answer, please input (sister or demon)'message
 
 mountain
 - Player takes the mountain path and encounters some flowers that they can pick smell or ignore.
- - 'pick' correctly connects to bear.
- - 'smell' correctly connects to game_over
- - 'ignore' correctly connects to bear
+  - 'pick' correctly connects to bear.
+  - 'smell' correctly connects to game_over
+  - 'ignore' correctly connects to bear
 
 bear
 - The player comes across a bear.  If they have kept the fish and picked the flower they can either fight, run, flower, or fish the bear.
- - 'fight and run' both correctly connect to game_over.
- - 'fish correctly only appears if the player has been to the lake and kept the fish.  It also correctly connects to demon_castle_mountain.
+  - 'fight and run' both correctly connect to game_over.
+  - 'fish correctly only appears if the player has been to the lake and kept the fish.  It also correctly connects to demon_castle_mountain.
  ![mountain bear fish no flowers](images/run-fight-fish.png)
- - 'flower' correctly only appears if the player has picked the flower. It also correctly connects to demon_castle_mountain
- - Any other input including one fish or flower when the player has not collected them will return :
+  - 'flower' correctly only appears if the player has picked the flower. It also correctly connects to demon_castle_mountain
+  - Any other input including one fish or flower when the player has not collected them will return :
  Do you {bear_input}
    - bear_input will state (run/fight/flower/fish) if the player has both the flower and the fish.
    - (run/fight/fish) if they only have the fish.
@@ -305,4 +327,4 @@ Deployment through Heroku
 9. Then click Display Branch and a new web page will open with your deployed site.
 ![deploy](images/heroku-5.png)
 
-![webpage](images/heroku-6.png)
+![g](images/game-title.png)
