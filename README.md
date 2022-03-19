@@ -60,14 +60,14 @@ The final product will be
 
 The site will be based on the following user needs.
 
-- I want the site to be easy to use.
+- I want the site to be easy and intuitive to use.
 - I want the game to be challenging.
 - I want the game to be similar to the ones I played as a child with a feeling of nostalgia.
 - I want it to be fun and interesting to play with a route that is not obvious on my first try.
 
 # Logic
 
-I spent some time working out the paths through this game to ensure I had a good idea of the game layout before I started coding.#
+I spent some time working out the paths through this game to ensure I had a good idea of the game layout before I started coding.
 I used the flow chart below to record these paths so the game was easy to follow when writing it.   
 
 ![flowchart](images/flowchart.png)
@@ -76,20 +76,20 @@ I used the flow chart below to record these paths so the game was easy to follow
 # Features
 
 - I used the time import to slow down the text using time.slow(2).
-This slowed down the text appearing at 2 or 3 second intervals allowing the user to read along with the text appearing like they were being told the storey.  I also put spaces into the lines so it was spaced out.
+This slowed down the text appearing at 2 or 3 second intervals allowing the user to read along with the text appearing like they were being told the storey.  I also put spaces into the lines so it was spaced out.  This makes it easier to read promoting ease of use.
 
 ![sleep and spacing code](images/time-sleep-code.png)
 ![sleep and spacing](images/sleep-space.png)
 
-- I used the pyfiglet import to jazz up the lettering for the game title and the winner and game over functions.
+- I used the pyfiglet import to jazz up the lettering for the game title and the winner and game _over functions.
 
 ![game title](images/game-title.png)
 
-- I also used the os import a loop for the winner and loser functions so the letters would appear individually at the end of the game.  This made a more appealing game ending than just the writing on the page.
+- I also used the os import a loop for the winner and loser functions so the letters would appear individually at the end of the game.  This made a more appealing and fun game ending than just the writing on the page.
 
 ![game over](images/game-over.png)
 
-I used simple input commands so that it is obvious to the user what words to input.  If the player does input an incorrect word a message appears advising of an incorrect input and reconfirming the correct input words.  This promotes ease of play.
+I used simple input commands so that it is obvious to the user what words to input.  If the player does input an incorrect word a message appears advising of an incorrect input and reconfirming the correct input words.  This promotes intuitive use and ease of play.
 
 ![clear inputs](images/clear-inputs.png)
 
@@ -127,7 +127,7 @@ The whole feel of the text game promotes that feeling of nostalgia of playing th
 
 - The game has only 3 correct pathways through.  It is also vital that the player collects the fish from the lake.  It is not always automatic to pick the left turn when playing a game, I felt this made it more interesting to play as it will probably take a good couple of goes before the player makes it to the end.  This keeps the game challenging and interesting as it hopefully takes a few tries to get to the end.
 
-- I tried to make the game deaths as interesting as I could.  Being eaten by tiny bugs and baby dragons or exploded by sweet-smelling flowers made losing the game funnier and more interesting. 
+- I tried to make the game deaths as interesting as I could.  Being eaten by tiny bugs and baby dragons or exploded by sweet-smelling flowers made losing the game funnier and more interesting. This promotes it bring fun and interesting to play. Whether or not the player wins the game it is fun to find out the different ways they can die.
 
 - I have left the endings open to further games being made.
 
@@ -177,9 +177,9 @@ lake
 
 lets_fish
  - Player catches a fish and has the option to keep the fish. 
-  - 'yes' correctly connects to stay_at_lake
-  - 'no' correctly connects to stay_at_lake
-  - any other answer receives 'Incorrect answer please type (yes or no)' message
+   - 'yes' correctly connects to stay_at_lake
+   - 'no' correctly connects to stay_at_lake
+   - any other answer receives 'Incorrect answer please type (yes or no)' message
 
 stay_at_lake
 - Asks player if they want to stay or move on with the game.
@@ -229,25 +229,26 @@ bear
   - 'fight and run' both correctly connect to game_over.
   - 'fish correctly only appears if the player has been to the lake and kept the fish.  It also correctly connects to demon_castle_mountain.
 
- ![mountain bear fish no flowers](images/run-fight-fish.png)
+![mountain bear fish no flowers](images/run-fight-fish.png)
 
-  - 'flower' correctly only appears if the player has picked the flower. It also correctly connects to demon_castle_mountain
-  - Any other input including one fish or flower when the player has not collected them will return :
- Do you {bear_input}
-   - bear_input will state (run/fight/flower/fish) if the player has both the flower and the fish.
-   - (run/fight/fish) if they only have the fish.
-   - (run/fight) if they have neither.
+    - 'flower' correctly only appears if the player has picked the flower. It also correctly connects to demon_castle_mountain
+    - Any other input including one fish or flower when the player has not collected them will return :
+    Do you {bear_input}
+    - bear_input will state (run/fight/flower/fish) if the player has both the flower and the fish.
+    - (run/fight/fish) if they only have the fish.
+    - (run/fight) if they have neither.
 
-   ![mountain no fish no flowers](images/mountain-no-fish-no-flowers.png)
+![mountain no fish no flowers](images/mountain-no-fish-no-flowers.png)
 
 It was at this point in testing that I realised that the player could get to the demon castle with a fish and I had not written an outcome for that possibility.  Without thorough testing, I would not have realised this.
 I have now written an extra winning ending that contains the fish.
 
 demon_castle_mountain
 - The player meets the Demon King and can defeat him with either the fish or the flower if they have it.  Or they can run or fight.
- - 'flower' correctly only appears if the player has picked the flower and not used it on the bear. It correctly connects to winner.
+  - 'flower' correctly only appears if the player has picked the flower and not used it on the bear. It correctly connects to winner.
 
 ![flower fight run](images/flower-fight-run.png) 
+
  - 'fish' correctly only appears if the player has kept the fish and not used it on the bear. It correctly connects to winner
 
 ![demon run fight fish](images/demon-fish-fight-run.png).
@@ -274,9 +275,9 @@ home_from_mountain
 
 play_again
 - asks the player if they wish to play again.
- - 'yes' correctly connects to open_image
- - 'no' correctly prints Thank you for playing and correctly exits.
- - Any other input receives 'Incorrect answer please type yes or no' message
+  - 'yes' correctly connects to open_image
+  - 'no' correctly prints Thank you for playing and correctly exits.
+  - Any other input receives 'Incorrect answer please type yes or no' message
 
 
 Finally, I tested my code in the http://pep8online.com/checkresult 
