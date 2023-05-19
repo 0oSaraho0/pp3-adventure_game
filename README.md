@@ -5,7 +5,7 @@
 
 -----
 
-[Demon Quest Live Site](https://pp3-adventure-game.herokuapp.com/)
+[Demon Quest Live Site](https://demon-quest.onrender.com/)
 
 
 # Table of Contents
@@ -306,6 +306,9 @@ As always my amazing mentor Daisy McGirr and the slack community.
 - http://ecotrust-canada.github.io/markdown-toc/
 
 # Deployment
+
+
+Deployment is now through Render
 
 Deployment through Heroku
 
